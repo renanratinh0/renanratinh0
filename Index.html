@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Renan Carvalho Cavalcante</title>
+	<link rel="stylesheet" href="index.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  
+
+</head>
+
+<body class="bg-dark">
+	<nav class="navbar navbar-expand-lg   ">
+		<div class="container-fluid">
+			<!-- Logo e Nome -->
+			<a class="navbar-brand fs-3 text-white px-5" href="#">
+				<img src="https://emoji-cdn.mqrio.dev/🧑‍💻?style=google" alt="Logo" width="60" height="60"
+					class="d-inline-block align-text-middle">
+				Renan Carvalho Cavalcante
+			</a>
+			<!-- Botão para menu responsivo -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- Itens do menu -->
+			<div class="collapse navbar-collapse fs-4 justify-content-between" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#projetos">Projetos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#sobre-mim">Sobre mim</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#depoimentos">Depoimentos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="Certificados.html">Certificados</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#curriculo">Curriculo</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="BG-Grup">
+		<div class="container text-center py-3">
+			<!-- Foto de Perfil -->
+			<img class="img-thumbnail rounded-circle mb-1" src="https://avatars.githubusercontent.com/u/163667005?v=4"
+				alt="Foto de Perfil" width="300">
+
+			<!-- Nome e Profissão -->
+			<figure>
+				<blockquote class="blockquote text-white">
+					<h1 class="H1">Renan Carvalho Cavalcante</h1>
+				</blockquote>
+				<figcaption class="blockquote-footer fs-4 text-white">
+					Programador de sistemas de informação, <cite title="Source Title">Trabalho atual</cite>
+				</figcaption>
+			</figure>
+
+			<!-- Logo -->
+			<img src="https://emoji-cdn.mqrio.dev/🧑‍💻?style=google" alt="Logo" width="100"
+				class="d-inline-block align-text-middle mb-4">
+
+
+			<h3 class="text-white">Cursando Ciência da Computação na<br> Universidade Cidade de São Paulo – 3° semestre
+			</h3>
+			<p class="text-white h4">Faltam apenas X segundos, X minutos, X horas e X dias para eu me formar!</p>
+			<h1 class="text-white" id="timer">00:00:00:00:00:00</h1>
+			<div class="Redes-Social">
+				<div class="container text-center">
+					<!-- Linha superior -->
+					<div class="row justify-content-center ">
+						<div class="col-auto icones  p-2">
+							<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"
+								target="_blank">
+								<svg id="icon" width="80" class="icones" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path class="icones"
+										d="M3.25781 3.11684C3.67771 3.45796 3.83523 3.43193 4.62369 3.37933L12.0571 2.93299C12.2147 2.93299 12.0836 2.77571 12.0311 2.74957L10.7965 1.85711C10.56 1.67347 10.2448 1.46315 9.64083 1.51576L2.44308 2.04074C2.18059 2.06677 2.12815 2.19801 2.2327 2.30322L3.25781 3.11684ZM3.7041 4.84917V12.6704C3.7041 13.0907 3.91415 13.248 4.38693 13.222L12.5562 12.7493C13.0292 12.7233 13.0819 12.4341 13.0819 12.0927V4.32397C13.0819 3.98306 12.9508 3.79921 12.6612 3.82545L4.12422 4.32397C3.80918 4.35044 3.7041 4.50803 3.7041 4.84917ZM11.7688 5.26872C11.8212 5.50518 11.7688 5.74142 11.5319 5.76799L11.1383 5.84641V11.6205C10.7965 11.8042 10.4814 11.9092 10.2188 11.9092C9.79835 11.9092 9.69305 11.7779 9.37812 11.3844L6.80345 7.34249V11.2532L7.61816 11.437C7.61816 11.437 7.61816 11.9092 6.96086 11.9092L5.14879 12.0143C5.09615 11.9092 5.14879 11.647 5.33259 11.5944L5.80546 11.4634V6.29276L5.1489 6.24015C5.09625 6.00369 5.22739 5.66278 5.5954 5.63631L7.53935 5.50528L10.2188 9.5998V5.97765L9.53564 5.89924C9.4832 5.61018 9.69305 5.40028 9.95576 5.37425L11.7688 5.26872ZM1.83874 1.33212L9.32557 0.780787C10.245 0.701932 10.4815 0.754753 11.0594 1.17452L13.4492 2.85424C13.8436 3.14309 13.975 3.22173 13.975 3.53661V12.7493C13.975 13.3266 13.7647 13.6681 13.0293 13.7203L4.33492 14.2454C3.78291 14.2717 3.52019 14.193 3.23111 13.8253L1.47116 11.5419C1.1558 11.1216 1.02466 10.8071 1.02466 10.4392V2.25041C1.02466 1.77825 1.23504 1.38441 1.83874 1.33212Z"
+										fill="#000000" />
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Linha inferior -->
+					<div class="row justify-content-center">
+						<div class="col-auto  p-2 ">
+							<a href="mailto:renancarvalhoce6@gmail.com" target="_blank" aria-label="Enviar e-mail">
+								<i class="icones fa-brands fa-linkedin fa-5x "></i>
+							</a>
+						</div>
+						<div class="col-auto  p-2 ">
+							<a href="https://github.com/renanratinh0" target="_blank" aria-label="GitHub">
+								<i class="icones fab fa-github fa-5x k"></i>
+							</a>
+						</div>
+						<div class="col-auto  p-2  black">
+							<a href="https://www.instagram.com/renan.carvalho.c/" target="_blank" aria-label="Instagram">
+								<i class="icones fab fa-instagram fa-5x"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<section id="projetos">
+	</div id="projetos" class="Projetos bg-dark">
+	<h1 class="text-center text-white py-5 bg-dark">Projetos</h1>
+	<div class="album py-5 bg-body-dark bg-dark">
+		<div class="container ">
+
+			<div class="row  row-cols-md-2 g-5">
+				<div class="col">
+					<div class="card shadow-sm bg-dark border-black">
+						<img class="img-projeto" src="imgs/Projetos/Site de Conteúdo Acadêmico - Ciência da Computação.png" alt="Capa do projeto">
+						<div class="card-body">
+							<h4 class="card-text text-white">Site de Conteúdo Acadêmico - Ciência da Computação</h4>
+							<p class="card-text text-white fw-bold fs-5">
+								Este site foi desenvolvido para facilitar o acesso e a organização dos materiais relacionados ao curso
+								de Ciência da Computação.
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
+								<span class="badge bg-primary fs-5 px-3 py-2">Notion</span>
+								<span class="badge bg-success fs-5 px-3 py-2">Design</span>
+								<span class="badge bg-warning text-dark fs-5 px-3 py-2">No Code</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
+								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Botões Centralizados -->
+								<div class="btn-group d-flex justify-content-center gap-10">
+
+									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
+											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
+
+									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
+											class="fa-solid fa-code fa-xl	"></i> Código</button>
+
+									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
+											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
+								</div>
+
+								<!-- Espaço para Data ou Elemento à Direita -->
+								<small class=" fw-bold text-white">05/2024 </small>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+				<div class="col">
+					<div class="card shadow-sm bg-dark border-black">
+						<img class="img-projeto" src="imgs/Projetos/Loja virtual Gadget.png" alt="Capa do projeto">
+						<div class="card-body">
+							<h4 class="card-text text-white">Loja virtual Gadget- WooCommerce</h4>
+							<p class="card-text text-white fw-bold fs-5">
+								Desenvolvi um e-commerce fictício no WooCommerce para testar e aprimorar minhas habilidades.
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
+								<span class="badge bg-primary fs-5 px-3 py-2">Wordpress</span>
+								<span class="badge bg-success fs-5 px-3 py-2">WooCommerce</span>
+								<span class="badge bg-warning text-dark fs-5 px-3 py-2">No Code</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
+								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
+								<span class="badge bg-danger fs-5 px-3 py-2 text-white">Sistematicamente</span>
+
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Botões Centralizados -->
+								<div class="btn-group d-flex justify-content-center gap-10">
+
+									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
+											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
+
+									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
+											class="fa-solid fa-code fa-xl	"></i> Código</button>
+
+									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
+											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
+								</div>
+
+								<!-- Espaço para Data ou Elemento à Direita -->
+								<small class=" fw-bold text-white">08/2024 </small>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm bg-dark border-black">
+						<img class="img-projeto" src="imgs/Projetos/PrintHub.png" alt="Capa do projeto">
+						<div class="card-body">
+							<h4 class="card-text text-white">PrintHub - Impressão Digital sob Demanda</h4>
+							<p class="card-text text-white fw-bold fs-5">
+								O PrintHub é uma plataforma onde o cliente pode informar para a empresa de impressão o que deseja imprimir, usando a API do WhatsApp para facilitar o processo de venda e atendimento.
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
+								<span class="badge bg-primary fs-5 px-3 py-2">HTML</span>
+								<span class="badge bg-warning text-dark fs-5 px-3 py-2">CSS</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">JS</span>
+
+								<span class="badge bg-danger text-white fs-5 px-3 py-2">API.WhatsApp</span>
+								<span class="badge bg-success fs-5 px-3 py-2">Design</span>
+
+								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Botões Centralizados -->
+								<div class="btn-group d-flex justify-content-center gap-10">
+
+									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
+											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
+
+									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
+											class="fa-solid fa-code fa-xl	"></i> Código</button>
+
+									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
+											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
+								</div>
+
+								<!-- Espaço para Data ou Elemento à Direita -->
+								<small class=" fw-bold text-white">04/2023 </small>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm bg-dark border-black">
+						<img class="img-projeto" src="imgs/Projetos/VitrineConnect.png" alt="Capa do projeto">
+						<div class="card-body">
+							<h4 class="card-text text-white">VitrineConnect - Vendas via Ecommerce basico
+							</h4>
+							<p class="card-text text-white fw-bold fs-5">
+								O VitrineConnect é uma plataforma onde o cliente pode ver produtos e clicar em comprar, que será redirecionado automaticamente para o WhatsApp com infomação do pedido feito.
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
+								<span class="badge bg-primary fs-5 px-3 py-2">HTML</span>
+								<span class="badge bg-warning text-dark fs-5 px-3 py-2">CSS</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">JS</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
+								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
+								<span class="badge bg-danger text-white fs-5 px-3 py-2">API.WhatsApp</span>
+
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Botões Centralizados -->
+								<div class="btn-group d-flex justify-content-center gap-10">
+
+									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
+											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
+
+									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
+											class="fa-solid fa-code fa-xl	"></i> Código</button>
+
+									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
+											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
+								</div>
+
+								<!-- Espaço para Data ou Elemento à Direita -->
+								<small class=" fw-bold text-white">07/2023 </small>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm bg-dark border-black">
+						<img class="img-projeto" src="imgs/Projetos/CodeQuiz.png" alt="Capa do projeto">
+						<div class="card-body">
+							<h4 class="card-text text-white">CodeQuiz - O genio Quiz da Programação</h4>
+							<p class="card-text text-white fw-bold fs-5">
+								O CodeQuiz é um jogo/site que simula o Gênio Quiz, testando habilidades de desenvolvimento web e conhecimentos de programação através de desafios progressivos.
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
+								<span class="badge bg-primary fs-5 px-3 py-2">HTML</span>
+								<span class="badge bg-success fs-5 px-3 py-2">CSS</span>
+								<span class="badge bg-warning text-dark fs-5 px-3 py-2">JS</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
+								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
+								<span class="badge bg-danger fs-5 px-3 py-2 text-white">Genio Quiz</span>
+								<span class="badge bg-danger fs-5 px-3 py-2 text-white">Game</span>
+
+
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Botões Centralizados -->
+								<div class="btn-group d-flex justify-content-center gap-10">
+
+									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
+											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
+
+									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
+											class="fa-solid fa-code fa-xl	"></i> Código</button>
+
+									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
+											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
+								</div>
+
+								<!-- Espaço para Data ou Elemento à Direita -->
+								<small class=" fw-bold text-white">05/2024 </small>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm bg-dark border-black">
+						<img class="img-projeto" src="imgs/Projetos/CalcOne.png" alt="Capa do projeto">
+						<div class="card-body">
+							<h4 class="card-text text-white">CalcOne - Calculadora de Operações Únicas</h4>
+							<p class="card-text text-white fw-bold fs-5">
+								A CalcOne é uma calculadora simples que realiza uma operação por vez, focando em cinco operações matemáticas básicas com interface limpa e Minimalista.
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
+								<span class="badge bg-primary fs-5 px-3 py-2">HTML</span>
+								<span class="badge bg-success fs-5 px-3 py-2">CSS</span>
+								<span class="badge bg-warning text-dark fs-5 px-3 py-2">JS</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
+								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Botões Centralizados -->
+								<div class="btn-group d-flex justify-content-center gap-10">
+
+									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
+											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
+
+									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
+											class="fa-solid fa-code fa-xl	"></i> Código</button>
+
+									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
+											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
+								</div>
+
+								<!-- Espaço para Data ou Elemento à Direita -->
+								<small class=" fw-bold text-white">02/2023 </small>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm bg-dark border-black">
+						<img class="img-projeto" src="imgs/Projetos/FacePoogers.png" alt="Capa do projeto">
+						<div class="card-body">
+							<h4 class="card-text text-white">FacePoogers - Clone da Página de Login do Facebook</h4>
+							<p class="card-text text-white fw-bold fs-5">
+								O FacePoogers é um projeto que recria a interface de login do Facebook, utilizando HTML e CSS para praticar desenvolvimento frontend e técnicas de layout responsivo.
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
+								<span class="badge bg-primary fs-5 px-3 py-2">Notion</span>
+								<span class="badge bg-success fs-5 px-3 py-2">Design</span>
+								<span class="badge bg-warning text-dark fs-5 px-3 py-2">No Code</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
+								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Botões Centralizados -->
+								<div class="btn-group d-flex justify-content-center gap-10">
+
+									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
+											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
+
+									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
+											class="fa-solid fa-code fa-xl	"></i> Código</button>
+
+									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
+											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
+								</div>
+
+								<!-- Espaço para Data ou Elemento à Direita -->
+								<small class=" fw-bold text-white">05/2024 </small>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+
+				<div class="col">
+					<div class="card shadow-sm bg-dark border-black">
+						<img  class="img-projeto" src="imgs/Projetos/TaskAutoPy.jpg" alt="Capa do projeto">
+						<div class="card-body">
+							<h4 class="card-text text-white">TaskAutoPy - Automação de Tarefas Repetitivas</h4>
+							<p class="card-text text-white fw-bold fs-5">
+								O TaskAutoPy é um projeto que utiliza Python e suas principais bibliotecas para automatizar tarefas repetitivas do dia a dia, aumentando a produtividade e reduzindo custo 
+							</p>
+							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
+								<span class="badge bg-primary fs-5 px-3 py-2">Python</span>
+								<span class="badge bg-success fs-5 px-3 py-2">Anaconda</span>
+								<span class="badge bg-warning text-dark fs-5 px-3 py-2">PyAutogui</span>
+								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
+								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Automações</span>
+							</div>
+
+							<div class="d-flex justify-content-between align-items-center">
+								<!-- Botões Centralizados -->
+								<div class="btn-group d-flex justify-content-center gap-10">
+
+									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
+											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
+
+									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
+											class="fa-solid fa-code fa-xl	"></i> Código</button>
+
+									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
+											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
+								</div>
+
+								<!-- Espaço para Data ou Elemento à Direita -->
+								<small class=" fw-bold text-white">05/2024 </small>
+							</div>
+						</div>
+					</div>
+					
+
+				</div>
+
+				
+
+				
+
+				
+
+			</div>
+				</div>
+		</div>
+	</section>
+	<section id="sobre-mim" class="container my-5 text-white">
+		<div class="row">
+			<div class="col-12">
+				<!-- Título da Seção -->
+				<h2 class="text-primary">Sobre Mim</h2>
+				<p class="fs-5">
+					Sou Renan Carvalho, profissional apaixonado por tecnologia, programação e soluções inovadoras. Tenho ampla
+					experiência em ERP, com foco em suporte a usuários, criação e otimização de regras de negócio e gerenciamento
+					de sistemas.
+					Minha abordagem combina análise técnica, criatividade e atenção aos detalhes, garantindo eficiência e
+					resultados consistentes em projetos desafiadores.
+				</p>
+				<p class="fs-5 margin-bottom">Nos momentos livres, gosto de jogar (estratégia e competitivos), resolver enigmas, praticar esportes ao ar livre, sair com amigos e familiares, além de ler e explorar conteúdos diversos, especialmente sobre ciência e lógica.</p>
+
+				<!-- Habilidades -->
+				<h3>Minhas Habilidades</h3>
+				<ul class="list-unstyled d-flex flex-wrap gap-3 fs-4">
+					<li class="Habilidades"><i class="fa-solid fa-code fa-lg"></i> Programação</li>
+					<li class="Habilidades"><i class="fa-solid fa-database fa-lg"></i> Banco de Dados</li>
+					<li class="Habilidades"><i class="fa-solid fa-robot fa-lg"></i> Inteligência Artificial</li>
+					<li class="Habilidades"><i class="fa-solid fa-server fa-lg"></i> Sistemas Operacionais</li>
+					<li class="Habilidades"><i class="fa-solid fa-tools fa-lg"></i> Automação de Processos</li>
+					<li class="Habilidades"><i class="fa-solid fa-project-diagram fa-lg"></i> Gestão de Projetos</li>
+					<li class="Habilidades"><i class="fa-solid fa-shield-alt fa-lg"></i> Segurança da Informação</li>
+					<li class="Habilidades"><i class="fa-solid fa-pencil-ruler fa-lg"></i> Design Gráfico</li>
+					<li class="Habilidades"><i class="fa-solid fa-chart-line fa-lg"></i> Análise e Visualização de Dados</li>
+					<li class="Habilidades"><i class="fa-solid fa-headset fa-lg"></i> Suporte Técnico em TI</li>
+					<li class="Habilidades"><i class="fa-solid fa-store fa-lg"></i> Gestão de Marketplace</li>
+					<li class="Habilidades"><i class="fa-solid fa-thumbs-up fa-lg"></i> Atendimento ao Cliente</li>
+					<li class="Habilidades"><i class="fa-solid fa-file-alt fa-lg"></i> Conhecimento Fiscal e NFe</li>
+					<li class="Habilidades"><i class="fa-solid fa-desktop fa-lg"></i> Microsoft Office (Excel, Word, PowerPoint)</li>
+					<li class="Habilidades"><i class="fa-solid fa-drafting-compass fa-lg"></i> Ferramentas Gráficas (CorelDRAW, Canva)</li>
+					<li class="Habilidades"><i class="fa-solid fa-server fa-lg"></i> Administração de Sistemas ERP</li>
+
+				</ul>
+				<!-- Linha do Tempo -->
+				<div class="container mt-5">
+					<h3 class="text-center">Minha Trajetória</h3>
+					
+					<div class="timeline">
+							<!-- 2019 -->
+							<div class="timeline-item mb-4">
+									<h4><strong>2019: O Começo da Jornada</strong></h4>
+									<p>
+											Em 2019, fui selecionado para participar da Estação Hack do Facebook, um programa incrível que me apresentou ao universo da programação. 
+											Ali, comecei a entender o poder de criar algo do zero, explorando possibilidades infinitas de construção digital.
+											Foi a partir desse momento que minha paixão por tecnologia e desenvolvimento começou a crescer, impulsionando-me a buscar mais conhecimento.
+									</p>
+							</div>
+			
+							<!-- 2020-2021 -->
+							<div class="timeline-item mb-4">
+									<h4><strong>2020-2021: Superando Desafios e Aprendendo</strong></h4>
+									<p>
+											O ano de 2020 trouxe desafios inesperados com a pandemia, e, apesar das dificuldades, busquei crescer. Enquanto fazia cursos e estudava para o ENEM,
+											decidi abrir um pequeno negócio de impressão no condomínio onde morava. Foi uma fase difícil, mas que me ensinou muito sobre perseverança e resiliência.
+											Ao mesmo tempo, mergulhei no mundo da programação e fiz cursos que me conectaram ainda mais com minha verdadeira paixão: desenvolver soluções digitais.
+									</p>
+							</div>
+			
+							<!-- 2022 -->
+							<div class="timeline-item mb-4">
+									<h4><strong>2022: Crescendo com a Análise de Dados e Desenvolvimento</strong></h4>
+									<p>
+											Em 2022, comecei a trabalhar como entregador para complementar a renda enquanto me aprofundava no aprendizado de análise de dados. 
+											Fiz cursos focados em Power BI e Excel, criando dashboards e análises que me ajudaram a entender o impacto real dos dados no mundo dos negócios.
+											Foi também o ano em que continuei investindo na minha carreira, buscando sempre mais conhecimento e novas oportunidades.
+									</p>
+							</div>
+			
+							<!-- 2023 -->
+							<div class="timeline-item mb-4">
+									<h4><strong>2023: De Estudante a Programador</strong></h4>
+									<p>
+											Em 2023, minhas habilidades foram reconhecidas e fui convidado a trabalhar como programador em uma empresa de hardware de computadores. 
+											Lá, fui responsável por desenvolver e manter sistemas de informação, garantindo que funcionassem de forma eficiente.
+											Essa experiência me ensinou sobre a importância de colaborar com outros profissionais e também me proporcionou uma imersão prática no mundo da programação.
+									</p>
+							</div>
+			
+							<!-- 2024 -->
+							<div class="timeline-item mb-4">
+									<h4><strong>2024: O Início da Graduação</strong></h4>
+									<p>
+											Em 2024, dei mais um passo importante na minha trajetória ao ingressar na graduação de Ciência da Computação na Universidade Cidade de São Paulo.
+											Com isso, estou aprendendo a aplicar meus conhecimentos em áreas mais complexas da computação, como inteligência artificial e segurança da informação.
+											Ao mesmo tempo, sigo atuando na área de tecnologia, desenvolvendo projetos que contribuem para meu crescimento acadêmico e profissional.
+									</p>
+							</div>
+					</div>
+			</div>
+			</section>
+
+			<section id="depoimentos" class="container my-5 text-white">
+
+				<!-- Depoimentos -->
+				<h3>O que dizem sobre mim</h3>
+				<div class="blockquote">
+					<p>"Renan é um profissional excepcional, com uma habilidade única para resolver problemas complexos e superar expectativas. Sua abordagem inovadora e proatividade em propor soluções eficientes transformaram significativamente a execução dos nossos projetos, elevando a qualidade e o impacto dos resultados. Trabalhar com ele foi uma experiência enriquecedora e inspiradora"</p>
+					<footer>- Gerente, Mundo dos Computadores</footer>
+				</div>
+				<div class="blockquote">
+					<p>"Renan foi essencial para o sucesso do nosso e-commerce. Desde o planejamento até a entrega final, ele demonstrou profundo conhecimento técnico e criatividade, criando um site altamente funcional e atraente. Após a implementação, nossas vendas cresceram significativamente, e o suporte contínuo que ele forneceu foi impecável."</p>
+					<footer>- João Silva, Empreendedor</footer>
+				</div>
+				
+				<div class="blockquote">
+					<p>"Precisávamos de um bot personalizado para integrar nosso sistema de mensagens e otimizar o atendimento ao cliente. Renan não apenas desenvolveu uma solução completa, mas também treinou nossa equipe para utilizá-la de forma eficaz. Sua paciência em entender nossas necessidades e sua capacidade de adaptação foram impressionantes."</p>
+					<footer>- Ana Costa, Gerente de Projetos</footer>
+				</div>
+				
+				<div class="blockquote">
+					<p>"Eu precisava criar uma apresentação para uma reunião crucial, e Renan fez um trabalho excepcional. Ele transformou informações complexas em gráficos claros e visualmente atraentes, tornando a apresentação um sucesso. A atenção dele aos detalhes e o compromisso em superar expectativas são qualidades raras."</p>
+					<footer>- Marcos Oliveira, Executivo</footer>
+				</div>
+				
+				<div class="blockquote">
+					<p>"Contratei Renan para desenvolver um filtro personalizado no Instagram para a minha marca. Ele rapidamente captou nossa identidade visual e traduziu isso em um filtro criativo e interativo, que impulsionou o engajamento dos nossos seguidores. Trabalhar com ele foi uma experiência tranquila e produtiva."</p>
+					<footer>- Carla Mendes, Proprietária de Marca</footer>
+				</div>
+				
+				<div class="blockquote">
+					<p>"Renan desenvolveu um site completo para minha pequena empresa, desde o design até a integração com sistemas de pagamento. Ele foi extremamente profissional e paciente, garantindo que todas as funcionalidades fossem entregues conforme o esperado. O site teve um impacto direto no aumento da nossa visibilidade e vendas."</p>
+					<footer>- Pedro Almeida, Pequeno Empresário</footer>
+				</div>
+				
+				<div class="blockquote">
+					<p>"Renan foi fundamental para a implementação de automações de processos na minha empresa. Ele conseguiu identificar gargalos nos nossos fluxos de trabalho e propôs soluções inovadoras que economizaram tempo e reduziram custos. Seu suporte técnico durante e após o projeto foi inestimável."</p>
+					<footer>- Luiza Ferreira, Diretora de Operações</footer>
+				</div>
+				
+				<div class="blockquote">
+					<p>"A expertise de Renan em TI foi crucial quando precisávamos de suporte técnico para integrar novos sistemas ao nosso ambiente de trabalho. Ele solucionou problemas complexos de maneira rápida e eficiente, além de capacitar a equipe para lidar com as novas ferramentas. Altamente recomendado!"</p>
+					<footer>- Thiago Nunes, Gerente de TI</footer>
+			
+					
+
+				
+			
+			</div>
+
+		</div>
+	</section>
+
+	</div>
+
+	<footer class="d-flex flex-column align-items-center py-3 my-4 border-top text-white" style="background-color: #033c6c;">
+		<div class="d-flex align-items-center mb-3">
+		  <a href="/" class="text-decoration-none lh-1">
+			<img src="https://emoji-cdn.mqrio.dev/🧑‍💻?style=google" alt="Logo" width="60" height="60">
+		  </a>
+		  <span class="ms-2">© 2025 Renan Carvalho</span>
+		</div>
+	  
+		<div class="d-flex justify-content-center gap-4">
+		  <a href="mailto:renancarvalhoce6@gmail.com" target="_blank" aria-label="Enviar e-mail">
+			<i class="fa-solid fa-envelope fa-2x"></i>
+		  </a>
+		  <a href="https://www.linkedin.com/in/renancarvalho/" target="_blank" aria-label="LinkedIn">
+			<i class="fa-brands fa-linkedin fa-2x"></i>
+		  </a>
+		  <a href="https://github.com/renanratinh0" target="_blank" aria-label="GitHub">
+			<i class="fa-brands fa-github fa-2x"></i>
+		  </a>
+		  <a href="https://www.instagram.com/renan.carvalho.c/" target="_blank" aria-label="Instagram">
+			<i class="fa-brands fa-instagram fa-2x"></i>
+		  </a>
+		</div>
+	  </footer>
+	  
+	
+
+
+
+
+
+	<script src="index.js"></script>
+</body>
+
+</html>

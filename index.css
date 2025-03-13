@@ -1,0 +1,75 @@
+
+html {
+    scroll-behavior: smooth;
+    color: #033c6c; /* Ou qualquer cor que você queira aplicar ao clicar */
+
+}
+
+/* Efeito de transição suave quando clicar em links */
+a {
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+a:active {
+    color: #033c6c; /* Ou qualquer cor que você queira aplicar ao clicar */
+    transform: scale(0.98); /* Efeito de diminuir um pouco o tamanho ao clicar */
+}
+    
+    .BG-Grup {
+        background-color:#033c6c;
+    }
+    .icones{
+        color: black;
+        
+    }
+    .icones:hover{
+        color: white;
+        transition: color 0.3s ease; /* Suaviza a transição de cor */
+        fill: white; 
+
+    }
+    
+    body{
+        background-color: #033c6c;
+        font-family: 'Roboto', sans-serif;
+
+
+
+    }
+    .gap-10 {
+        gap: 5rem; /* Espaço amplo entre botões */
+    }
+    
+    .card-body small {
+        margin-left: 2rem; /* Espaço adicional entre os botões e o texto da data */
+    }
+    
+    .img-projeto{
+        max-height: 313.75px;
+    }
+    .Habilidades {
+        transition: color 0.3s;
+        transition: font-size 0.3s ease;
+
+    }
+
+    .Habilidades:hover {
+        animation: rgbText 2s linear infinite;
+    font-size: xx-large ;
+    transition: font-size 0.3s ease;
+    }
+
+    @keyframes rgbText {
+        0% {
+            color: rgb(255, 0, 0);
+        }
+        33% {
+            color: rgb(0, 255, 0);
+        }
+        66% {
+            color: rgb(0, 0, 255);
+        }
+        100% {
+            color: rgb(255, 0, 0);
+        }
+    }
