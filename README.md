@@ -18,12 +18,12 @@ Ao longo da minha trajetória, realizei diversos cursos – de Excel Avançado e
 
 
 ### 🎮 **PC Gamer**
-.  <img src="https://img.shields.io/badge/AMD-Ryzen_3_3200G-ED1C24?style=for-the-badge&logo=amd&logoColor=white" alt="AMD Ryzen 3 3200G" />
+  <img src="https://img.shields.io/badge/AMD-Ryzen_3_3200G-ED1C24?style=for-the-badge&logo=amd&logoColor=white" alt="AMD Ryzen 3 3200G" />
   <img src="https://img.shields.io/badge/AMD-Radeon_RX_6600XT-ED1C24?style=for-the-badge&logo=amd&logoColor=white" alt="AMD Radeon RX 6600XT" />
   <img src="https://img.shields.io/badge/Kingston-12GB_DDR4-999999?style=for-the-badge&logo=kingston&logoColor=white" alt="Kingston 12GB DDR4" />
 
 ### 💻 **Notebook**
-.  <img src="https://img.shields.io/badge/Dell-Inspiron_15_3520-0078D6?style=for-the-badge&logo=dell&logoColor=white" alt="Dell Inspiron 15 3520" />
+  <img src="https://img.shields.io/badge/Dell-Inspiron_15_3520-0078D6?style=for-the-badge&logo=dell&logoColor=white" alt="Dell Inspiron 15 3520" />
   <img src="https://img.shields.io/badge/Intel-Core_i5_12th-0071C5?style=for-the-badge&logo=intel&logoColor=white" alt="Intel Core i5 12th" />
   <img src="https://img.shields.io/badge/Intel-Iris_Xe-0071C5?style=for-the-badge&logo=intel&logoColor=white" alt="Intel Iris Xe" />
   <img src="https://img.shields.io/badge/Kingston-16GB_DDR4-999999?style=for-the-badge&logo=kingston&logoColor=white" alt="Kingston 16GB DDR4" />
@@ -41,7 +41,7 @@ Ao longo da minha trajetória, realizei diversos cursos – de Excel Avançado e
 
 ## 🛠️ Ferramentas e Tecnologias
 
-.  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" />
@@ -60,7 +60,6 @@ Ao longo da minha trajetória, realizei diversos cursos – de Excel Avançado e
 
 ## 🌐 Contatos & Redes
 
-.  <div align="center">
   <a href="https://github.com/renanratinh0" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
@@ -76,6 +75,5 @@ Ao longo da minha trajetória, realizei diversos cursos – de Excel Avançado e
   <a href="https://www.instagram.com/renan.carvalho.c/" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
-</div>
 
 </div>
