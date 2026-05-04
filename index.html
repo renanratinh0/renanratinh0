@@ -1,637 +1,1726 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Renan Carvalho Cavalcante</title>
-	<link rel="stylesheet" href="index.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Renan Carvalho Cavalcante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0d1117',
+                        cardBg: '#161b22',
+                        brandCyan: '#22d3ee',
+                        textMuted: '#8b949e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0f15;
+            color: #e5e7eb;
+        }
 
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0b0f15;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+            width: max-content;
+        }
+
+        /* Custom Terminal Cursor Animation */
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-dark">
-	<nav class="navbar navbar-expand-lg   ">
-		<div class="container-fluid">
-			<!-- Logo e Nome -->
-			<a class="navbar-brand fs-3 text-white px-5" href="#">
-				<img src="https://emoji-cdn.mqrio.dev/🧑‍💻?style=google" alt="Logo" width="60" height="60"
-					class="d-inline-block align-text-middle">
-				Renan Carvalho Cavalcante
-			</a>
-			<!-- Botão para menu responsivo -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<!-- Itens do menu -->
-			<div class="collapse navbar-collapse fs-4 justify-content-between" id="navbarNav">
-				<ul class="navbar-nav ms-auto">
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#projetos">Projetos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#sobre-mim">Sobre mim</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#depoimentos">Depoimentos</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="Certificados.html">Certificados</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#curriculo">Curriculo</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="BG-Grup">
-		<div class="container text-center py-3">
-			<!-- Foto de Perfil -->
-			<img class="img-thumbnail rounded-circle mb-1" src="https://avatars.githubusercontent.com/u/163667005?v=4"
-				alt="Foto de Perfil" width="300">
-
-			<!-- Nome e Profissão -->
-			<figure>
-				<blockquote class="blockquote text-white">
-					<h1 class="H1">Renan Carvalho Cavalcante</h1>
-				</blockquote>
-				<figcaption class="blockquote-footer fs-4 text-white">
-					Programador de sistemas de informação, <cite title="Source Title">Trabalho atual</cite>
-				</figcaption>
-			</figure>
-
-			<!-- Logo -->
-			<img src="https://emoji-cdn.mqrio.dev/🧑‍💻?style=google" alt="Logo" width="100"
-				class="d-inline-block align-text-middle mb-4">
-
-
-			<h3 class="text-white">Cursando Ciência da Computação na<br> Universidade Cidade de São Paulo – 3° semestre
-			</h3>
-			<p class="text-white h4">Faltam apenas X segundos, X minutos, X horas e X dias para eu me formar!</p>
-			<h1 class="text-white" id="timer">00:00:00:00:00:00</h1>
-			<div class="Redes-Social">
-				<div class="container text-center">
-					<!-- Linha superior -->
-					<div class="row justify-content-center ">
-						<div class="col-auto icones  p-2">
-							<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"
-								target="_blank">
-								<svg id="icon" width="80" class="icones" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path class="icones"
-										d="M3.25781 3.11684C3.67771 3.45796 3.83523 3.43193 4.62369 3.37933L12.0571 2.93299C12.2147 2.93299 12.0836 2.77571 12.0311 2.74957L10.7965 1.85711C10.56 1.67347 10.2448 1.46315 9.64083 1.51576L2.44308 2.04074C2.18059 2.06677 2.12815 2.19801 2.2327 2.30322L3.25781 3.11684ZM3.7041 4.84917V12.6704C3.7041 13.0907 3.91415 13.248 4.38693 13.222L12.5562 12.7493C13.0292 12.7233 13.0819 12.4341 13.0819 12.0927V4.32397C13.0819 3.98306 12.9508 3.79921 12.6612 3.82545L4.12422 4.32397C3.80918 4.35044 3.7041 4.50803 3.7041 4.84917ZM11.7688 5.26872C11.8212 5.50518 11.7688 5.74142 11.5319 5.76799L11.1383 5.84641V11.6205C10.7965 11.8042 10.4814 11.9092 10.2188 11.9092C9.79835 11.9092 9.69305 11.7779 9.37812 11.3844L6.80345 7.34249V11.2532L7.61816 11.437C7.61816 11.437 7.61816 11.9092 6.96086 11.9092L5.14879 12.0143C5.09615 11.9092 5.14879 11.647 5.33259 11.5944L5.80546 11.4634V6.29276L5.1489 6.24015C5.09625 6.00369 5.22739 5.66278 5.5954 5.63631L7.53935 5.50528L10.2188 9.5998V5.97765L9.53564 5.89924C9.4832 5.61018 9.69305 5.40028 9.95576 5.37425L11.7688 5.26872ZM1.83874 1.33212L9.32557 0.780787C10.245 0.701932 10.4815 0.754753 11.0594 1.17452L13.4492 2.85424C13.8436 3.14309 13.975 3.22173 13.975 3.53661V12.7493C13.975 13.3266 13.7647 13.6681 13.0293 13.7203L4.33492 14.2454C3.78291 14.2717 3.52019 14.193 3.23111 13.8253L1.47116 11.5419C1.1558 11.1216 1.02466 10.8071 1.02466 10.4392V2.25041C1.02466 1.77825 1.23504 1.38441 1.83874 1.33212Z"
-										fill="#000000" />
-								</svg>
-							</a>
-						</div>
-					</div>
-
-					<!-- Linha inferior -->
-					<div class="row justify-content-center">
-						<div class="col-auto  p-2 ">
-							<a href="mailto:renancarvalhoce6@gmail.com" target="_blank" aria-label="Enviar e-mail">
-								<i class="icones fa-brands fa-linkedin fa-5x "></i>
-							</a>
-						</div>
-						<div class="col-auto  p-2 ">
-							<a href="https://github.com/renanratinh0" target="_blank" aria-label="GitHub">
-								<i class="icones fab fa-github fa-5x k"></i>
-							</a>
-						</div>
-						<div class="col-auto  p-2  black">
-							<a href="https://www.instagram.com/renan.carvalho.c/" target="_blank" aria-label="Instagram">
-								<i class="icones fab fa-instagram fa-5x"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div>
-		<section id="projetos">
-	</div id="projetos" class="Projetos bg-dark">
-	<h1 class="text-center text-white py-5 bg-dark">Projetos</h1>
-	<div class="album py-5 bg-body-dark bg-dark">
-		<div class="container ">
-
-			<div class="row  row-cols-md-2 g-5">
-				<div class="col">
-					<div class="card shadow-sm bg-dark border-black">
-						<img class="img-projeto" src="imgs/Projetos/Site de Conteúdo Acadêmico - Ciência da Computação.png" alt="Capa do projeto">
-						<div class="card-body">
-							<h4 class="card-text text-white">Site de Conteúdo Acadêmico - Ciência da Computação</h4>
-							<p class="card-text text-white fw-bold fs-5">
-								Este site foi desenvolvido para facilitar o acesso e a organização dos materiais relacionados ao curso
-								de Ciência da Computação.
-							</p>
-							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
-								<span class="badge bg-primary fs-5 px-3 py-2">Notion</span>
-								<span class="badge bg-success fs-5 px-3 py-2">Design</span>
-								<span class="badge bg-warning text-dark fs-5 px-3 py-2">No Code</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
-								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
-							</div>
-
-							<div class="d-flex justify-content-between align-items-center">
-								<!-- Botões Centralizados -->
-								<div class="btn-group d-flex justify-content-center gap-10">
-
-									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
-											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
-
-									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
-											class="fa-solid fa-code fa-xl	"></i> Código</button>
-
-									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
-											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
-								</div>
-
-								<!-- Espaço para Data ou Elemento à Direita -->
-								<small class=" fw-bold text-white">05/2024 </small>
-							</div>
-						</div>
-					</div>
-					
-
-				</div>
-				<div class="col">
-					<div class="card shadow-sm bg-dark border-black">
-						<img class="img-projeto" src="imgs/Projetos/TecnoStoreBR.png" alt="Capa do projeto">
-						<div class="card-body">
-							<h4 class="card-text text-white">Loja virtual Gadget- WooCommerce</h4>
-							<p class="card-text text-white fw-bold fs-5">
-								Desenvolvi um e-commerce fictício no WooCommerce para testar e aprimorar minhas habilidades.
-							</p>
-							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
-								<span class="badge bg-primary fs-5 px-3 py-2">Wordpress</span>
-								<span class="badge bg-success fs-5 px-3 py-2">WooCommerce</span>
-								<span class="badge bg-warning text-dark fs-5 px-3 py-2">No Code</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
-								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
-								<span class="badge bg-danger fs-5 px-3 py-2 text-white">Sistematicamente</span>
-
-							</div>
-
-							<div class="d-flex justify-content-between align-items-center">
-								<!-- Botões Centralizados -->
-								<div class="btn-group d-flex justify-content-center gap-10">
-
-									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
-											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
-
-									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
-											class="fa-solid fa-code fa-xl	"></i> Código</button>
-
-									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
-											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
-								</div>
-
-								<!-- Espaço para Data ou Elemento à Direita -->
-								<small class=" fw-bold text-white">08/2024 </small>
-							</div>
-						</div>
-					</div>
-					
-
-				</div>
-
-				<div class="col">
-					<div class="card shadow-sm bg-dark border-black">
-						<img class="img-projeto" src="imgs/Projetos/PrintHub.png" alt="Capa do projeto">
-						<div class="card-body">
-							<h4 class="card-text text-white">PrintHub - Impressão Digital sob Demanda</h4>
-							<p class="card-text text-white fw-bold fs-5">
-								O PrintHub é uma plataforma onde o cliente pode informar para a empresa de impressão o que deseja imprimir, usando a API do WhatsApp para facilitar o processo de venda e atendimento.
-							</p>
-							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
-								<span class="badge bg-primary fs-5 px-3 py-2">HTML</span>
-								<span class="badge bg-warning text-dark fs-5 px-3 py-2">CSS</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">JS</span>
-
-								<span class="badge bg-danger text-white fs-5 px-3 py-2">API.WhatsApp</span>
-								<span class="badge bg-success fs-5 px-3 py-2">Design</span>
-
-								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
-							</div>
-
-							<div class="d-flex justify-content-between align-items-center">
-								<!-- Botões Centralizados -->
-								<div class="btn-group d-flex justify-content-center gap-10">
-
-									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
-											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
-
-									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
-											class="fa-solid fa-code fa-xl	"></i> Código</button>
-
-									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
-											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
-								</div>
-
-								<!-- Espaço para Data ou Elemento à Direita -->
-								<small class=" fw-bold text-white">04/2023 </small>
-							</div>
-						</div>
-					</div>
-					
-
-				</div>
-
-				<div class="col">
-					<div class="card shadow-sm bg-dark border-black">
-						<img class="img-projeto" src="imgs/Projetos/VitrineConnect.png" alt="Capa do projeto">
-						<div class="card-body">
-							<h4 class="card-text text-white">VitrineConnect - Vendas via Ecommerce basico
-							</h4>
-							<p class="card-text text-white fw-bold fs-5">
-								O VitrineConnect é uma plataforma onde o cliente pode ver produtos e clicar em comprar, que será redirecionado automaticamente para o WhatsApp com infomação do pedido feito.
-							</p>
-							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
-								<span class="badge bg-primary fs-5 px-3 py-2">HTML</span>
-								<span class="badge bg-warning text-dark fs-5 px-3 py-2">CSS</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">JS</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
-								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
-								<span class="badge bg-danger text-white fs-5 px-3 py-2">API.WhatsApp</span>
-
-							</div>
-
-							<div class="d-flex justify-content-between align-items-center">
-								<!-- Botões Centralizados -->
-								<div class="btn-group d-flex justify-content-center gap-10">
-
-									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
-											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
-
-									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
-											class="fa-solid fa-code fa-xl	"></i> Código</button>
-
-									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
-											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
-								</div>
-
-								<!-- Espaço para Data ou Elemento à Direita -->
-								<small class=" fw-bold text-white">07/2023 </small>
-							</div>
-						</div>
-					</div>
-					
-
-				</div>
-
-				<div class="col">
-					<div class="card shadow-sm bg-dark border-black">
-						<img class="img-projeto" src="imgs/Projetos/CodeQuiz.png" alt="Capa do projeto">
-						<div class="card-body">
-							<h4 class="card-text text-white">CodeQuiz - O genio Quiz da Programação</h4>
-							<p class="card-text text-white fw-bold fs-5">
-								O CodeQuiz é um jogo/site que simula o Gênio Quiz, testando habilidades de desenvolvimento web e conhecimentos de programação através de desafios progressivos.
-							</p>
-							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
-								<span class="badge bg-primary fs-5 px-3 py-2">HTML</span>
-								<span class="badge bg-success fs-5 px-3 py-2">CSS</span>
-								<span class="badge bg-warning text-dark fs-5 px-3 py-2">JS</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
-								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
-								<span class="badge bg-danger fs-5 px-3 py-2 text-white">Genio Quiz</span>
-								<span class="badge bg-danger fs-5 px-3 py-2 text-white">Game</span>
-
-
-							</div>
-
-							<div class="d-flex justify-content-between align-items-center">
-								<!-- Botões Centralizados -->
-								<div class="btn-group d-flex justify-content-center gap-10">
-
-									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
-											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
-
-									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
-											class="fa-solid fa-code fa-xl	"></i> Código</button>
-
-									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
-											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
-								</div>
-
-								<!-- Espaço para Data ou Elemento à Direita -->
-								<small class=" fw-bold text-white">05/2024 </small>
-							</div>
-						</div>
-					</div>
-					
-
-				</div>
-
-				<div class="col">
-					<div class="card shadow-sm bg-dark border-black">
-						<img class="img-projeto" src="imgs/Projetos/CalcOne.png" alt="Capa do projeto">
-						<div class="card-body">
-							<h4 class="card-text text-white">CalcOne - Calculadora de Operações Únicas</h4>
-							<p class="card-text text-white fw-bold fs-5">
-								A CalcOne é uma calculadora simples que realiza uma operação por vez, focando em cinco operações matemáticas básicas com interface limpa e Minimalista.
-							</p>
-							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
-								<span class="badge bg-primary fs-5 px-3 py-2">HTML</span>
-								<span class="badge bg-success fs-5 px-3 py-2">CSS</span>
-								<span class="badge bg-warning text-dark fs-5 px-3 py-2">JS</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
-								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
-							</div>
-
-							<div class="d-flex justify-content-between align-items-center">
-								<!-- Botões Centralizados -->
-								<div class="btn-group d-flex justify-content-center gap-10">
-
-									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
-											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
-
-									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
-											class="fa-solid fa-code fa-xl	"></i> Código</button>
-
-									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
-											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
-								</div>
-
-								<!-- Espaço para Data ou Elemento à Direita -->
-								<small class=" fw-bold text-white">02/2023 </small>
-							</div>
-						</div>
-					</div>
-					
-
-				</div>
-
-				<div class="col">
-					<div class="card shadow-sm bg-dark border-black">
-						<img class="img-projeto" src="imgs/Projetos/FacePoogers.png" alt="Capa do projeto">
-						<div class="card-body">
-							<h4 class="card-text text-white">FacePoogers - Clone da Página de Login do Facebook</h4>
-							<p class="card-text text-white fw-bold fs-5">
-								O FacePoogers é um projeto que recria a interface de login do Facebook, utilizando HTML e CSS para praticar desenvolvimento frontend e técnicas de layout responsivo.
-							</p>
-							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
-								<span class="badge bg-primary fs-5 px-3 py-2">Notion</span>
-								<span class="badge bg-success fs-5 px-3 py-2">Design</span>
-								<span class="badge bg-warning text-dark fs-5 px-3 py-2">No Code</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
-								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Minimalista</span>
-							</div>
-
-							<div class="d-flex justify-content-between align-items-center">
-								<!-- Botões Centralizados -->
-								<div class="btn-group d-flex justify-content-center gap-10">
-
-									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
-											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
-
-									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
-											class="fa-solid fa-code fa-xl	"></i> Código</button>
-
-									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
-											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
-								</div>
-
-								<!-- Espaço para Data ou Elemento à Direita -->
-								<small class=" fw-bold text-white">05/2024 </small>
-							</div>
-						</div>
-					</div>
-					
-
-				</div>
-
-				<div class="col">
-					<div class="card shadow-sm bg-dark border-black">
-						<img  class="img-projeto" src="imgs/Projetos/TaskAutoPy.jpg" alt="Capa do projeto">
-						<div class="card-body">
-							<h4 class="card-text text-white">TaskAutoPy - Automação de Tarefas Repetitivas</h4>
-							<p class="card-text text-white fw-bold fs-5">
-								O TaskAutoPy é um projeto que utiliza Python e suas principais bibliotecas para automatizar tarefas repetitivas do dia a dia, aumentando a produtividade e reduzindo custo 
-							</p>
-							<div class="d-flex flex-wrap gap-3 mt-4 mb-4">
-								<span class="badge bg-primary fs-5 px-3 py-2">Python</span>
-								<span class="badge bg-success fs-5 px-3 py-2">Anaconda</span>
-								<span class="badge bg-warning text-dark fs-5 px-3 py-2">PyAutogui</span>
-								<span class="badge bg-info text-dark fs-5 px-3 py-2">Programação</span>
-								<span class="badge bg-white fs-5 px-3 py-2 text-dark">Automações</span>
-							</div>
-
-							<div class="d-flex justify-content-between align-items-center">
-								<!-- Botões Centralizados -->
-								<div class="btn-group d-flex justify-content-center gap-10">
-
-									<a href="https://ciencia-da-computariaassinatura.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687"><button type="button" class="btn btn-lg btn-outline-success fs-4"><i
-											class="fa-solid fa-desktop fa-xl	"></i> Acessa projeto</button>
-
-									<a href="https://carbon.now.sh/?bg=rgba%28226%2C74%2C77%2C1%29&t=dracula-pro&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520function%2520Eror%2520404%2520esse%2520projeto%2520N%25C3%25A3o%2520possui%2520um%2520c%25C3%25B3digo%2520em%2520carbon%2520%28%29%2520%257B%250A%2520%2520const%2520projectStatus%2520%253D%2520false%253B%2520%2520%252F%252F%2520Simulando%2520que%2520n%25C3%25A3o%2520h%25C3%25A1%2520c%25C3%25B3digo%2520dispon%25C3%25ADvel%250A%2520%257D%250Aclass%2520CodeHunt%2520%257B%250A%2520%2520constructor%28%29%2520%257B%250A%2520%2520%2520%2520this.status%2520%253D%2520%2522Nenhum%2520c%25C3%25B3digo%2520encontrado%2522%253B%250A%2520%2520%2520%2520this.attempts%2520%253D%25200%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Simula%2520uma%2520busca%2520intermin%25C3%25A1vel%2520por%2520um%2520c%25C3%25B3digo%2520ausente%250A%2520%2520searchForCode%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%2594%258D%2520Buscando%2520c%25C3%25B3digo...%2522%29%253B%250A%2520%2520%2520%2520this.attempts%252B%252B%253B%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520if%2520%28this.attempts%2520%253C%25203%29%2520%257B%250A%2520%2520%2520%2520%2520%2520console.log%28%2560Tentativa%2520%2523%2524%257Bthis.attempts%257D%253A%2520Nada%2520ainda...%2560%29%253B%250A%2520%2520%2520%2520%257D%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520this.trigger404Error%28%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Exibe%2520mensagens%2520de%2520erro%2520%250A%2520%2520trigger404Error%28%29%2520%257B%250A%2520%2520%2520%2520console.log%28%2522%25E2%259D%258C%2520ERRO%2520404%253A%2520C%25C3%25B3digo%2520n%25C3%25A3o%2520encontrado.%2522%29%253B%250A%2520%2520%2520%2520console.log%28%2522%25F0%259F%25A4%2594%2520Dica%253A%2520Talvez%2520o%2520c%25C3%25B3digo%2520esteja%2520em%2520um%2520universo%2520paralelo...%2522%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520Fun%25C3%25A7%25C3%25A3o%2520que%2520inicia%2520a%2520busca%250A%2520%2520startSearch%28%29%2520%257B%250A%2520%2520%2520%2520setInterval%28%28%29%2520%253D%253E%2520this.searchForCode%28%29%252C%25202000%29%253B%250A%2520%2520%250A%257D%250A%250A"><button type="button" class="btn btn-lg btn-outline-primary fs-4"><i
-											class="fa-solid fa-code fa-xl	"></i> Código</button>
-
-									<a href="https://github.com/renanratinh0"><button type="button" class="btn btn-lg btn-outline-danger fs-4"><i
-											class="fa-brands fa-github fa-xl	"></i> GitHub</button></a>
-								</div>
-
-								<!-- Espaço para Data ou Elemento à Direita -->
-								<small class=" fw-bold text-white">05/2024 </small>
-							</div>
-						</div>
-					</div>
-					
-
-				</div>
-
-				
-
-				
-
-				
-
-			</div>
-				</div>
-		</div>
-	</section>
-	<section id="sobre-mim" class="container my-5 text-white">
-		<div class="row">
-			<div class="col-12">
-				<!-- Título da Seção -->
-				<h2 class="text-primary">Sobre Mim</h2>
-				<p class="fs-5">
-					Sou Renan Carvalho, profissional apaixonado por tecnologia, programação e soluções inovadoras. Tenho ampla
-					experiência em ERP, com foco em suporte a usuários, criação e otimização de regras de negócio e gerenciamento
-					de sistemas.
-					Minha abordagem combina análise técnica, criatividade e atenção aos detalhes, garantindo eficiência e
-					resultados consistentes em projetos desafiadores.
-				</p>
-				<p class="fs-5 margin-bottom">Nos momentos livres, gosto de jogar (estratégia e competitivos), resolver enigmas, praticar esportes ao ar livre, sair com amigos e familiares, além de ler e explorar conteúdos diversos, especialmente sobre ciência e lógica.</p>
-
-				<!-- Habilidades -->
-				<h3>Minhas Habilidades</h3>
-				<ul class="list-unstyled d-flex flex-wrap gap-3 fs-4">
-					<li class="Habilidades"><i class="fa-solid fa-code fa-lg"></i> Programação</li>
-					<li class="Habilidades"><i class="fa-solid fa-database fa-lg"></i> Banco de Dados</li>
-					<li class="Habilidades"><i class="fa-solid fa-robot fa-lg"></i> Inteligência Artificial</li>
-					<li class="Habilidades"><i class="fa-solid fa-server fa-lg"></i> Sistemas Operacionais</li>
-					<li class="Habilidades"><i class="fa-solid fa-tools fa-lg"></i> Automação de Processos</li>
-					<li class="Habilidades"><i class="fa-solid fa-project-diagram fa-lg"></i> Gestão de Projetos</li>
-					<li class="Habilidades"><i class="fa-solid fa-shield-alt fa-lg"></i> Segurança da Informação</li>
-					<li class="Habilidades"><i class="fa-solid fa-pencil-ruler fa-lg"></i> Design Gráfico</li>
-					<li class="Habilidades"><i class="fa-solid fa-chart-line fa-lg"></i> Análise e Visualização de Dados</li>
-					<li class="Habilidades"><i class="fa-solid fa-headset fa-lg"></i> Suporte Técnico em TI</li>
-					<li class="Habilidades"><i class="fa-solid fa-store fa-lg"></i> Gestão de Marketplace</li>
-					<li class="Habilidades"><i class="fa-solid fa-thumbs-up fa-lg"></i> Atendimento ao Cliente</li>
-					<li class="Habilidades"><i class="fa-solid fa-file-alt fa-lg"></i> Conhecimento Fiscal e NFe</li>
-					<li class="Habilidades"><i class="fa-solid fa-desktop fa-lg"></i> Microsoft Office (Excel, Word, PowerPoint)</li>
-					<li class="Habilidades"><i class="fa-solid fa-drafting-compass fa-lg"></i> Ferramentas Gráficas (CorelDRAW, Canva)</li>
-					<li class="Habilidades"><i class="fa-solid fa-server fa-lg"></i> Administração de Sistemas ERP</li>
-
-				</ul>
-				<!-- Linha do Tempo -->
-				<div class="container mt-5">
-					<h3 class="text-center">Minha Trajetória</h3>
-					
-					<div class="timeline">
-							<!-- 2019 -->
-							<div class="timeline-item mb-4">
-									<h4><strong>2019: O Começo da Jornada</strong></h4>
-									<p>
-											Em 2019, fui selecionado para participar da Estação Hack do Facebook, um programa incrível que me apresentou ao universo da programação. 
-											Ali, comecei a entender o poder de criar algo do zero, explorando possibilidades infinitas de construção digital.
-											Foi a partir desse momento que minha paixão por tecnologia e desenvolvimento começou a crescer, impulsionando-me a buscar mais conhecimento.
-									</p>
-							</div>
-			
-							<!-- 2020-2021 -->
-							<div class="timeline-item mb-4">
-									<h4><strong>2020-2021: Superando Desafios e Aprendendo</strong></h4>
-									<p>
-											O ano de 2020 trouxe desafios inesperados com a pandemia, e, apesar das dificuldades, busquei crescer. Enquanto fazia cursos e estudava para o ENEM,
-											decidi abrir um pequeno negócio de impressão no condomínio onde morava. Foi uma fase difícil, mas que me ensinou muito sobre perseverança e resiliência.
-											Ao mesmo tempo, mergulhei no mundo da programação e fiz cursos que me conectaram ainda mais com minha verdadeira paixão: desenvolver soluções digitais.
-									</p>
-							</div>
-			
-							<!-- 2022 -->
-							<div class="timeline-item mb-4">
-									<h4><strong>2022: Crescendo com a Análise de Dados e Desenvolvimento</strong></h4>
-									<p>
-											Em 2022, comecei a trabalhar como entregador para complementar a renda enquanto me aprofundava no aprendizado de análise de dados. 
-											Fiz cursos focados em Power BI e Excel, criando dashboards e análises que me ajudaram a entender o impacto real dos dados no mundo dos negócios.
-											Foi também o ano em que continuei investindo na minha carreira, buscando sempre mais conhecimento e novas oportunidades.
-									</p>
-							</div>
-			
-							<!-- 2023 -->
-							<div class="timeline-item mb-4">
-									<h4><strong>2023: De Estudante a Programador</strong></h4>
-									<p>
-											Em 2023, minhas habilidades foram reconhecidas e fui convidado a trabalhar como programador em uma empresa de hardware de computadores. 
-											Lá, fui responsável por desenvolver e manter sistemas de informação, garantindo que funcionassem de forma eficiente.
-											Essa experiência me ensinou sobre a importância de colaborar com outros profissionais e também me proporcionou uma imersão prática no mundo da programação.
-									</p>
-							</div>
-			
-							<!-- 2024 -->
-							<div class="timeline-item mb-4">
-									<h4><strong>2024: O Início da Graduação</strong></h4>
-									<p>
-											Em 2024, dei mais um passo importante na minha trajetória ao ingressar na graduação de Ciência da Computação na Universidade Cidade de São Paulo.
-											Com isso, estou aprendendo a aplicar meus conhecimentos em áreas mais complexas da computação, como inteligência artificial e segurança da informação.
-											Ao mesmo tempo, sigo atuando na área de tecnologia, desenvolvendo projetos que contribuem para meu crescimento acadêmico e profissional.
-									</p>
-							</div>
-					</div>
-			</div>
-			</section>
-
-			<section id="depoimentos" class="container my-5 text-white">
-
-				<!-- Depoimentos -->
-				<h3>O que dizem sobre mim</h3>
-				<div class="blockquote">
-					<p>"Renan é um profissional excepcional, com uma habilidade única para resolver problemas complexos e superar expectativas. Sua abordagem inovadora e proatividade em propor soluções eficientes transformaram significativamente a execução dos nossos projetos, elevando a qualidade e o impacto dos resultados. Trabalhar com ele foi uma experiência enriquecedora e inspiradora"</p>
-					<footer>- Gerente, Mundo dos Computadores</footer>
-				</div>
-				<div class="blockquote">
-					<p>"Renan foi essencial para o sucesso do nosso e-commerce. Desde o planejamento até a entrega final, ele demonstrou profundo conhecimento técnico e criatividade, criando um site altamente funcional e atraente. Após a implementação, nossas vendas cresceram significativamente, e o suporte contínuo que ele forneceu foi impecável."</p>
-					<footer>- João Silva, Empreendedor</footer>
-				</div>
-				
-				<div class="blockquote">
-					<p>"Precisávamos de um bot personalizado para integrar nosso sistema de mensagens e otimizar o atendimento ao cliente. Renan não apenas desenvolveu uma solução completa, mas também treinou nossa equipe para utilizá-la de forma eficaz. Sua paciência em entender nossas necessidades e sua capacidade de adaptação foram impressionantes."</p>
-					<footer>- Ana Costa, Gerente de Projetos</footer>
-				</div>
-				
-				<div class="blockquote">
-					<p>"Eu precisava criar uma apresentação para uma reunião crucial, e Renan fez um trabalho excepcional. Ele transformou informações complexas em gráficos claros e visualmente atraentes, tornando a apresentação um sucesso. A atenção dele aos detalhes e o compromisso em superar expectativas são qualidades raras."</p>
-					<footer>- Marcos Oliveira, Executivo</footer>
-				</div>
-				
-				<div class="blockquote">
-					<p>"Contratei Renan para desenvolver um filtro personalizado no Instagram para a minha marca. Ele rapidamente captou nossa identidade visual e traduziu isso em um filtro criativo e interativo, que impulsionou o engajamento dos nossos seguidores. Trabalhar com ele foi uma experiência tranquila e produtiva."</p>
-					<footer>- Carla Mendes, Proprietária de Marca</footer>
-				</div>
-				
-				<div class="blockquote">
-					<p>"Renan desenvolveu um site completo para minha pequena empresa, desde o design até a integração com sistemas de pagamento. Ele foi extremamente profissional e paciente, garantindo que todas as funcionalidades fossem entregues conforme o esperado. O site teve um impacto direto no aumento da nossa visibilidade e vendas."</p>
-					<footer>- Pedro Almeida, Pequeno Empresário</footer>
-				</div>
-				
-				<div class="blockquote">
-					<p>"Renan foi fundamental para a implementação de automações de processos na minha empresa. Ele conseguiu identificar gargalos nos nossos fluxos de trabalho e propôs soluções inovadoras que economizaram tempo e reduziram custos. Seu suporte técnico durante e após o projeto foi inestimável."</p>
-					<footer>- Luiza Ferreira, Diretora de Operações</footer>
-				</div>
-				
-				<div class="blockquote">
-					<p>"A expertise de Renan em TI foi crucial quando precisávamos de suporte técnico para integrar novos sistemas ao nosso ambiente de trabalho. Ele solucionou problemas complexos de maneira rápida e eficiente, além de capacitar a equipe para lidar com as novas ferramentas. Altamente recomendado!"</p>
-					<footer>- Thiago Nunes, Gerente de TI</footer>
-			
-					
-
-				
-			
-			</div>
-
-		</div>
-	</section>
-
-	</div>
-
-	<footer class="d-flex flex-column align-items-center py-3 my-4 border-top text-white" style="background-color: #033c6c;">
-		<div class="d-flex align-items-center mb-3">
-		  <a href="/" class="text-decoration-none lh-1">
-			<img src="https://emoji-cdn.mqrio.dev/🧑‍💻?style=google" alt="Logo" width="60" height="60">
-		  </a>
-		  <span class="ms-2">© 2025 Renan Carvalho</span>
-		</div>
-	  
-		<div class="d-flex justify-content-center gap-4">
-		  <a href="mailto:renancarvalhoce6@gmail.com" target="_blank" aria-label="Enviar e-mail">
-			<i class="fa-solid fa-envelope fa-2x"></i>
-		  </a>
-		  <a href="https://www.linkedin.com/in/renancarvalho/" target="_blank" aria-label="LinkedIn">
-			<i class="fa-brands fa-linkedin fa-2x"></i>
-		  </a>
-		  <a href="https://github.com/renanratinh0" target="_blank" aria-label="GitHub">
-			<i class="fa-brands fa-github fa-2x"></i>
-		  </a>
-		  <a href="https://www.instagram.com/renan.carvalho.c/" target="_blank" aria-label="Instagram">
-			<i class="fa-brands fa-instagram fa-2x"></i>
-		  </a>
-		</div>
-	  </footer>
-	  
-	
-
-
-
-
-
-	<script src="index.js"></script>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-brandCyan selection:text-black">
+
+<!-- Navbar -->
+<nav class="fixed w-full z-50 bg-[#0b0f15]/80 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img src="https://emoji-cdn.mqrio.dev/🧑‍💻?style=google" alt="Logo" class="w-6 h-6">
+            <span class="font-semibold text-sm tracking-wide">Renan Carvalho</span>
+        </a>
+
+        <div class="flex items-center gap-8">
+            <ul class="hidden md:flex gap-6 text-xs font-medium text-textMuted tracking-wider uppercase items-center">
+                <li><a href="#projetos" data-i18n="nav-projects" class="hover:text-white transition-colors">Projetos</a>
+                </li>
+                <li><a href="#sobre-mim" data-i18n="nav-about" class="hover:text-white transition-colors">Sobre mim</a>
+                </li>
+                <li><a href="#certificados" data-i18n="nav-certs" class="hover:text-white transition-colors">Certificados</a>
+                </li>
+                <li><a href="#depoimentos" data-i18n="nav-feedback"
+                       class="hover:text-white transition-colors">Feedback</a></li>
+
+                <!-- Botão de Tradução (i18n) -->
+                <li>
+                    <button onclick="toggleLang()" id="lang-btn"
+                            class="ml-4 flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-3 py-1.5 rounded-full transition-colors border border-gray-700">
+                        🇺🇸 EN
+                    </button>
+                </li>
+            </ul>
+
+            <div class="md:hidden text-textMuted text-xl flex gap-4 items-center">
+                <button onclick="toggleLang()" id="lang-btn-mobile" class="text-sm">🇺🇸</button>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center text-center mt-10">
+        <div class="relative">
+            <div class="absolute -inset-1 bg-brandCyan rounded-full blur-md opacity-30"></div>
+            <img src="https://avatars.githubusercontent.com/u/163667005?v=4" alt="Foto de Perfil"
+                 class="relative w-56 h-56 rounded-full object-cover border-2 border-brandCyan shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-bold mt-8 mb-2 tracking-tight">Renan Carvalho Cavalcante</h1>
+        <p data-i18n="hero-role"
+           class="text-brandCyan text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-4">Programador de
+            sistemas de informação</p>
+
+        <div class="max-w-2xl mx-auto text-textMuted text-sm leading-relaxed mb-10">
+            <p data-i18n="hero-desc">Cursando Ciência da Computação na Universidade Cidade de São Paulo – 5° semestre.
+                Apaixonado por transformar desafios complexos em código limpo e produtos eficientes.</p>
+        </div>
+
+        <!-- Timer / Counters Display -->
+        <!-- Timer / Counters Display -->
+        <div class="bg-cardBg border border-gray-800 rounded-2xl p-6 shadow-lg mb-10 inline-block w-full max-w-3xl">
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                <div class="flex flex-col items-center">
+                    <span id="timer-anos" class="text-3xl md:text-4xl font-bold text-brandCyan">00</span>
+                    <span data-i18n="time-y"
+                          class="text-[10px] text-textMuted uppercase tracking-widest mt-1">Anos</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span id="timer-meses" class="text-3xl md:text-4xl font-bold text-brandCyan">00</span>
+                    <span data-i18n="time-mo"
+                          class="text-[10px] text-textMuted uppercase tracking-widest mt-1">Meses</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span id="timer-dias" class="text-3xl md:text-4xl font-bold text-brandCyan">00</span>
+                    <span data-i18n="time-d"
+                          class="text-[10px] text-textMuted uppercase tracking-widest mt-1">Dias</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span id="timer-horas" class="text-3xl md:text-4xl font-bold text-brandCyan">00</span>
+                    <span data-i18n="time-h"
+                          class="text-[10px] text-textMuted uppercase tracking-widest mt-1">Horas</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span id="timer-minutos" class="text-3xl md:text-4xl font-bold text-brandCyan">00</span>
+                    <span data-i18n="time-m"
+                          class="text-[10px] text-textMuted uppercase tracking-widest mt-1">Minutos</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span id="timer-segundos" class="text-3xl md:text-4xl font-bold text-brandCyan">00</span>
+                    <span data-i18n="time-s"
+                          class="text-[10px] text-textMuted uppercase tracking-widest mt-1">Segundos</span>
+                </div>
+            </div>
+        </div>
+        <!-- Botões de Ação & Social Links -->
+        <div class="flex flex-col gap-4"> <!-- flex-col coloca em coluna -->
+            <a href="Curriculo.html" target="_blank" rel="noopener noreferrer"
+               class="bg-brandCyan text-white px-6 py-2 rounded inline-block text-center hover:opacity-90 transition-opacity">
+                Ver Currículo
+            </a>
+            <div class="flex gap-6 items-center text-textMuted">
+                <a href="https://dashboard-quantum-smart.notion.site/11d65e23a26e4be3941e4ce7681342ac?v=0c05f0c70dfe46608736fea6d0f9096f"
+                   target="_blank" class="hover:text-white transition-colors text-5xl">
+                    <svg width="1em" height="1em" viewBox="0 0 15 15" fill="currentColor"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.25781 3.11684C3.67771 3.45796 3.83523 3.43193 4.62369 3.37933L12.0571 2.93299C12.2147 2.93299 12.0836 2.77571 12.0311 2.74957L10.7965 1.85711C10.56 1.67347 10.2448 1.46315 9.64083 1.51576L2.44308 2.04074C2.18059 2.06677 2.12815 2.19801 2.2327 2.30322L3.25781 3.11684ZM3.7041 4.84917V12.6704C3.7041 13.0907 3.91415 13.248 4.38693 13.222L12.5562 12.7493C13.0292 12.7233 13.0819 12.4341 13.0819 12.0927V4.32397C13.0819 3.98306 12.9508 3.79921 12.6612 3.82545L4.12422 4.32397C3.80918 4.35044 3.7041 4.50803 3.7041 4.84917ZM11.7688 5.26872C11.8212 5.50518 11.7688 5.74142 11.5319 5.76799L11.1383 5.84641V11.6205C10.7965 11.8042 10.4814 11.9092 10.2188 11.9092C9.79835 11.9092 9.69305 11.7779 9.37812 11.3844L6.80345 7.34249V11.2532L7.61816 11.437C7.61816 11.437 7.61816 11.9092 6.96086 11.9092L5.14879 12.0143C5.09615 11.9092 5.14879 11.647 5.33259 11.5944L5.80546 11.4634V6.29276L5.1489 6.24015C5.09625 6.00369 5.22739 5.66278 5.5954 5.63631L7.53935 5.50528L10.2188 9.5998V5.97765L9.53564 5.89924C9.4832 5.61018 9.69305 5.40028 9.95576 5.37425L11.7688 5.26872ZM1.83874 1.33212L9.32557 0.780787C10.245 0.701932 10.4815 0.754753 11.0594 1.17452L13.4492 2.85424C13.8436 3.14309 13.975 3.22173 13.975 3.53661V12.7493C13.975 13.3266 13.7647 13.6681 13.0293 13.7203L4.33492 14.2454C3.78291 14.2717 3.52019 14.193 3.23111 13.8253L1.47116 11.5419C1.1558 11.1216 1.02466 10.8071 1.02466 10.4392V2.25041C1.02466 1.77825 1.23504 1.38441 1.83874 1.33212Z"/>
+                    </svg>
+                </a>
+                <a href="mailto:renancarvalhoce6@gmail.com" target="_blank"
+                   class="hover:text-white transition-colors text-5xl">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://github.com/renanratinh0" target="_blank"
+                   class="hover:text-white transition-colors text-5xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/renan.carvalho.c/" target="_blank"
+                   class="hover:text-white transition-colors text-5xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Tech Stack Marquee -->
+    <div class="mt-24 border-y border-gray-800 bg-[#0a0d14] py-8 overflow-hidden relative flex">
+        <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0b0f15] to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0b0f15] to-transparent z-10"></div>
+        <div class="animate-scroll flex gap-16 items-center text-gray-500 text-4xl opacity-60 hover:opacity-100 transition-opacity duration-500">
+
+            <!-- Bloco 1 -->
+            <div class="flex gap-16 items-center px-8">
+                <i class="fa-brands fa-python hover:text-brandCyan transition-colors cursor-pointer" title="Python"></i>
+                <i class="fa-brands fa-java hover:text-brandCyan transition-colors cursor-pointer" title="Java"></i>
+                <i class="fa-brands fa-js hover:text-brandCyan transition-colors cursor-pointer" title="JavaScript"></i>
+                <i class="fa-brands fa-html5 hover:text-brandCyan transition-colors cursor-pointer" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt hover:text-brandCyan transition-colors cursor-pointer" title="CSS3"></i>
+                <i class="fa-brands fa-react hover:text-brandCyan transition-colors cursor-pointer" title="React"></i>
+                <i class="fa-brands fa-bootstrap hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Bootstrap"></i>
+                <i class="fa-solid fa-wind hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Tailwind CSS"></i>
+                <i class="fa-brands fa-node-js hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Node.js"></i>
+                <i class="fa-brands fa-wordpress hover:text-brandCyan transition-colors cursor-pointer"
+                   title="WordPress"></i>
+                <i class="fa-brands fa-aws hover:text-brandCyan transition-colors cursor-pointer" title="AWS"></i>
+                <i class="fa-brands fa-github hover:text-brandCyan transition-colors cursor-pointer" title="GitHub"></i>
+                <i class="fa-brands fa-git-alt hover:text-brandCyan transition-colors cursor-pointer" title="Git"></i>
+                <i class="fa-brands fa-linux hover:text-brandCyan transition-colors cursor-pointer" title="Linux"></i>
+                <i class="fa-brands fa-windows hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Windows"></i>
+                <i class="fa-brands fa-android hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Android"></i>
+                <i class="fa-solid fa-gamepad hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Game Development"></i>
+                <i class="fa-solid fa-database hover:text-brandCyan transition-colors cursor-pointer" title="SQL"></i>
+            </div>
+
+            <!-- Bloco 2  -->
+            <div class="flex gap-16 items-center px-8">
+                <i class="fa-brands fa-python hover:text-brandCyan transition-colors cursor-pointer" title="Python"></i>
+                <i class="fa-brands fa-java hover:text-brandCyan transition-colors cursor-pointer" title="Java"></i>
+                <i class="fa-brands fa-js hover:text-brandCyan transition-colors cursor-pointer" title="JavaScript"></i>
+                <i class="fa-brands fa-html5 hover:text-brandCyan transition-colors cursor-pointer" title="HTML5"></i>
+                <i class="fa-brands fa-css3-alt hover:text-brandCyan transition-colors cursor-pointer" title="CSS3"></i>
+                <i class="fa-brands fa-react hover:text-brandCyan transition-colors cursor-pointer" title="React"></i>
+                <i class="fa-brands fa-bootstrap hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Bootstrap"></i>
+                <i class="fa-solid fa-wind hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Tailwind CSS"></i>
+                <i class="fa-brands fa-node-js hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Node.js"></i>
+                <i class="fa-brands fa-wordpress hover:text-brandCyan transition-colors cursor-pointer"
+                   title="WordPress"></i>
+                <i class="fa-brands fa-aws hover:text-brandCyan transition-colors cursor-pointer" title="AWS"></i>
+                <i class="fa-brands fa-github hover:text-brandCyan transition-colors cursor-pointer" title="GitHub"></i>
+                <i class="fa-brands fa-git-alt hover:text-brandCyan transition-colors cursor-pointer" title="Git"></i>
+                <i class="fa-brands fa-linux hover:text-brandCyan transition-colors cursor-pointer" title="Linux"></i>
+                <i class="fa-brands fa-windows hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Windows"></i>
+                <i class="fa-brands fa-android hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Android"></i>
+                <i class="fa-solid fa-gamepad hover:text-brandCyan transition-colors cursor-pointer"
+                   title="Game Development"></i>
+                <i class="fa-solid fa-database hover:text-brandCyan transition-colors cursor-pointer" title="SQL"></i>
+            </div>
+
+        </div>
+    </div>
+    <!-- projetos  -->
+    <section id="projetos" class="mt-40">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 border-b border-gray-800 pb-4">
+            <div>
+                <p data-i18n="proj-sub" class="text-[10px] text-brandCyan uppercase tracking-widest font-semibold mb-2">
+                    Portfólio</p>
+                <h2 data-i18n="proj-title" class="text-3xl font-bold">Meus Projetos</h2>
+            </div>
+            <p data-i18n="proj-desc" class="text-textMuted text-sm max-w-sm mt-4 md:mt-0 text-left md:text-right">
+                Uma seleção de desafios técnicos transformados em soluções funcionais e escaláveis.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Projeto 1: TecnoStoreBR -->
+            <div class="bg-cardBg border border-gray-800 rounded-xl overflow-hidden hover:border-gray-600 transition-colors group flex flex-col">
+                <div class="h-48 bg-gray-900 overflow-hidden relative">
+                    <img src="imgs/Projetos/TecnoStoreBR.png" alt="TecnoStoreBR"
+                         class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 opacity-90">
+                </div>
+                <div class="p-6 flex flex-col flex-grow relative z-20">
+                    <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">JavaScript</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Tailwind CSS</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">E-commerce</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">TecnoStoreBR (E-commerce de Hardware)</h3>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6 flex-grow">Um projeto de e-commerce simulado
+                        que demonstra habilidades em desenvolvimento, manipulação de dados e operações de TI.
+                        Desenvolvido com HTML, CSS, JS, Tailwind CSS e Firebase.</p>
+                    <div class="flex items-center justify-between mt-auto w-full">
+                        <a href="https://renanratinh0.github.io/TecnoStoreBR/"
+                           class="bg-brandCyan/10 text-brandCyan hover:bg-brandCyan hover:text-black border border-brandCyan/30 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-desktop"></i> <span data-i18n="btn-access">Acessar</span>
+                        </a>
+                        <a href="https://github.com/renanratinh0/TecnoStoreBR"
+                           class="bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 2: Site de Conteúdo Acadêmico -->
+            <div class="bg-cardBg border border-gray-800 rounded-xl overflow-hidden hover:border-gray-600 transition-colors group flex flex-col">
+                <div class="h-48 bg-gray-900 overflow-hidden relative">
+                    <img src="imgs/Projetos/site-academico.png" alt="Site Acadêmico"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                </div>
+                <div class="p-6 flex flex-col flex-grow relative z-20">
+                    <div class="flex gap-2 mb-3 flex-wrap">
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Notion API</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">No Code</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">UX/UI</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Site Acadêmico - Ciência da Computação</h3>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6 flex-grow">Todo o curso de Ciência da
+                        Computação, organizado de forma inteligente. Uma solução digital inovadora que utiliza o poder
+                        do Notion e design No-Code para entregar uma experiência acadêmica prática, rápida e
+                        intuitiva.</p>
+                    <div class="flex items-center justify-between mt-auto w-full">
+                        <a href="SiteAcademico.html"
+                           class="bg-brandCyan/10 text-brandCyan hover:bg-brandCyan hover:text-black border border-brandCyan/30 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-desktop"></i> <span data-i18n="btn-access">Acessar</span>
+                        </a>
+                        <a href="https://github.com/renanratinh0/Study-OS-Dashboard-Quantum-Smart"
+                           class="bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3: Portfólio Pessoal -->
+            <div class="bg-cardBg border border-gray-800 rounded-xl overflow-hidden hover:border-gray-600 transition-colors group flex flex-col">
+                <div class="h-48 bg-gray-900 overflow-hidden relative">
+                    <img src="imgs/Projetos/Portfolio.png" alt="Meu Portfólio"
+                         class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 opacity-90">
+                </div>
+                <div class="p-6 flex flex-col flex-grow relative z-20">
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Tailwind CSS</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">HTML5</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Responsivo</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Portfólio Pessoal</h3>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6 flex-grow">Meu espaço pessoal na web. Um
+                        portfólio responsivo construído para exibir meus principais projetos, certificações e meios de
+                        contato com um design limpo e focado na experiência do usuário.</p>
+                    <div class="flex items-center justify-between mt-auto w-full">
+                        <a href="index.html"
+                           class="bg-brandCyan/10 text-brandCyan hover:bg-brandCyan hover:text-black border border-brandCyan/30 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-code"></i> <span data-i18n="btn-code">Código</span>
+                        </a>
+                        <a href="https://github.com/renanratinh0/renanratinh0"
+                           class="bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 4: CodeQuiz -->
+            <div class="bg-cardBg border border-gray-800 rounded-xl overflow-hidden hover:border-gray-600 transition-colors group flex flex-col">
+                <div class="h-48 bg-gray-900 overflow-hidden relative">
+                    <img src="imgs/Projetos/CodeQuiz.png" alt="CodeQuiz"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                </div>
+                <div class="p-6 flex flex-col flex-grow relative z-20">
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">JS Vanilla</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Bootstrap</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Game Dev</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">CodeQuiz - O Gênio Quiz</h3>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6 flex-grow">Uma aplicação web interativa
+                        inspirada no clássico Gênio Quiz, mas totalmente adaptada para o universo dev. O jogo de
+                        perguntas e respostas focado em lógica de programação, contando com validação em tempo real e
+                        interface responsiva.</p>
+                    <div class="flex items-center justify-between mt-auto w-full">
+                        <a href="https://renanratinh0.github.io/CodeQuiz/"
+                           class="bg-brandCyan/10 text-brandCyan hover:bg-brandCyan hover:text-black border border-brandCyan/30 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-gamepad"></i> <span data-i18n="btn-access">Jogar</span>
+                        </a>
+                        <a href="https://github.com/renanratinh0/CodeQuiz"
+                           class="bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Projeto 5: SmileCare -->
+            <div class="bg-cardBg border border-gray-800 rounded-xl overflow-hidden hover:border-gray-600 transition-colors group flex flex-col">
+                <div class="h-48 bg-gray-900 overflow-hidden relative">
+                    <img src="imgs/Projetos/SmileCare.png" alt="CodeQuiz"
+                         class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 opacity-90">
+                </div>
+                <div class="p-6 flex flex-col flex-grow relative z-20">
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">JS Vanilla</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Bootstrap</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Game Dev</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">SmileCare</h3>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6 flex-grow">Um sistema web completo para gestão
+                        de clínicas. O SmileCare centraliza processos, além de controle financeiro e de estoque em um
+                        painel único, utilizando Firebase para o gerenciamento do banco de dados.</p>
+                    <div class="flex items-center justify-between mt-auto w-full">
+                        <a href="https://renanratinh0.github.io/SmileCare/"
+                           class="bg-brandCyan/10 text-brandCyan hover:bg-brandCyan hover:text-black border border-brandCyan/30 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-desktop"></i> <span data-i18n="btn-access">Acessar</span>
+
+                        </a>
+                        <a href="https://github.com/renanratinh0/SmileCare"
+                           class="bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Projeto 6: FacePoogers -->
+            <div class="bg-cardBg border border-gray-800 rounded-xl overflow-hidden hover:border-gray-600 transition-colors group flex flex-col">
+                <div class="h-48 bg-gray-900 overflow-hidden relative">
+                    <img src="imgs/Projetos/FacePoogers.png" alt="CodeQuiz"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                </div>
+                <div class="p-6 flex flex-col flex-grow relative z-20">
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">JS Vanilla</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Bootstrap</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Game Dev</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">FacePoogers</h3>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6 flex-grow">Um clone divertido e responsivo da
+                        página de login do Facebook, desenvolvido para praticar fundamentos de frontend. O FacePoogers
+                        utiliza HTML5 semântico, CSS3 (Flexbox e Grid) para um layout adaptável e Vanilla JavaScript</p>
+                    <div class="flex items-center justify-between mt-auto w-full">
+                        <a href="https://renanratinh0.github.io/FacePoogers/"
+                           class="bg-brandCyan/10 text-brandCyan hover:bg-brandCyan hover:text-black border border-brandCyan/30 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-desktop"></i> <span data-i18n="btn-access">Acessar</span>
+
+                        </a>
+                        <a href="https://github.com/renanratinh0/FacePoogers"
+                           class="bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 6: Calculadora-Classica -->
+
+            <div class="bg-cardBg border border-gray-800 rounded-xl overflow-hidden hover:border-gray-600 transition-colors group flex flex-col">
+                <div class="h-48 bg-gray-900 overflow-hidden relative">
+                    <img src="imgs/Projetos/CalcOne.png" alt="CodeQuiz"
+                         class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 opacity-90">
+                </div>
+                <div class="p-6 flex flex-col flex-grow relative z-20">
+                    <div class="flex gap-2 mb-3">
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">JS Vanilla</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Bootstrap</span>
+                        <span class="bg-[#1c2128] text-gray-300 text-[10px] uppercase font-semibold px-2.5 py-1 rounded border border-transparent hover:border-brandCyan/50 hover:text-brandCyan hover:bg-brandCyan/10 hover:-translate-y-1 hover:shadow-[0_4px_10px_rgba(34,211,238,0.2)] transition-all duration-300 cursor-default">Game Dev</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Calculadora-Classica</h3>
+                    <p class="text-textMuted text-sm leading-relaxed mb-6 flex-grow">Um jogo de perguntas e respostas
+                        utilizando HTML, CSS e JavaScript, com o framework Bootstrap para estilização.</p>
+                    <div class="flex items-center justify-between mt-auto w-full">
+                        <a href="https://renanratinh0.github.io/Calculadora-Classica/"
+                           class="bg-brandCyan/10 text-brandCyan hover:bg-brandCyan hover:text-black border border-brandCyan/30 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-desktop"></i> <span data-i18n="btn-access">Acessar</span>
+
+                        </a>
+                        <a href="https://github.com/renanratinh0/Calculadora-Classica"
+                           class="bg-transparent border border-gray-700 hover:border-gray-500 text-gray-300 text-xs font-semibold px-4 py-2 rounded transition-colors flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="sobre-mim"
+             class="mt-40 relative rounded-3xl overflow-hidden p-8 md:p-12 lg:p-16 border border-gray-800 shadow-2xl">
+        <div class="absolute inset-0 z-0 bg-[#0a0d14]">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_10%,transparent_100%)]"></div>
+            <div class="absolute -top-[30%] -left-[10%] w-[60%] h-[60%] bg-brandCyan/20 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute top-[10%] -right-[10%] w-[50%] h-[70%] bg-blue-700/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80"
+                 alt="Background Code"
+                 class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-luminosity [mask-image:linear-gradient(to_left,black_20%,transparent_90%)] pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0b0f15] via-[#0b0f15]/80 to-[#0b0f15]/20 pointer-events-none"></div>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-16 relative z-10">
+            <!-- Coluna da Esquerda (Bio + Habilidades) -->
+            <div>
+                <p data-i18n="about-sub"
+                   class="text-[10px] text-brandCyan uppercase tracking-widest font-semibold mb-2">Minha Jornada</p>
+                <h2 data-i18n="nav-about" class="text-3xl font-bold mb-6">Sobre Mim</h2>
+
+                <div class="text-textMuted text-sm leading-relaxed space-y-4">
+                    <p data-i18n="about-p1">Sou Renan Carvalho, um profissional movido pela paixão por tecnologia,
+                        programação e pela busca constante por soluções inovadoras. Com uma sólida vivência em
+                        administração de sistemas ERP, destaco-me no suporte técnico a usuários, na criação e otimização
+                        de regras de negócio complexas e no gerenciamento eficiente de infraestruturas. Minha abordagem
+                        de trabalho é fundamentada na união entre análise técnica rigorosa, criatividade na resolução de
+                        problemas e uma atenção minuciosa aos detalhes, garantindo eficiência e resultados consistentes
+                        em projetos desafiadores.</p>
+                    <p data-i18n="about-p2">Quando não estou imerso em linhas de código, gosto de exercitar a mente com
+                        jogos de estratégia e competitivos, além de resolver enigmas lógicos. Valorizo o equilíbrio
+                        recarregando as energias praticando esportes ao ar livre e aproveitando momentos de qualidade
+                        com amigos e familiares. Também sou um leitor assíduo, explorando continuamente conteúdos sobre
+                        ciência, lógica e novas tecnologias.</p>
+                </div>
+
+                <h3 data-i18n="about-skills" class="text-lg font-bold text-white mt-10 mb-4">Minhas Habilidades</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span data-i18n="skill-1"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-code mr-1"></i> Programação</span>
+                    <span data-i18n="skill-2"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-database mr-1"></i> Banco de Dados</span>
+                    <span data-i18n="skill-3"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-brain mr-1"></i> Inteligência Artificial</span>
+                    <span data-i18n="skill-4"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-server mr-1"></i> Sistemas Operacionais</span>
+                    <span data-i18n="skill-5"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-cogs mr-1"></i> Automação de Processos</span>
+                    <span data-i18n="skill-6"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-tasks mr-1"></i> Gestão de Projetos</span>
+                    <span data-i18n="skill-7"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-shield-halved mr-1"></i> Segurança da Informação</span>
+                    <span data-i18n="skill-8"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-pen-nib mr-1"></i> Design Gráfico</span>
+                    <span data-i18n="skill-9"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-chart-bar mr-1"></i> Análise de Dados</span>
+                    <span data-i18n="skill-10"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-headset mr-1"></i> Suporte Técnico em TI</span>
+                    <span data-i18n="skill-11"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-store mr-1"></i> Gestão de Marketplace</span>
+                    <span data-i18n="skill-12"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-users mr-1"></i> Atendimento ao Cliente</span>
+                    <span data-i18n="skill-13"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-file-invoice-dollar mr-1"></i> Conhecimento Fiscal e NFe</span>
+                    <span data-i18n="skill-14"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-file-excel mr-1"></i> Microsoft Office</span>
+                    <span data-i18n="skill-15"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-object-group mr-1"></i> Ferramentas Gráficas</span>
+                    <span data-i18n="skill-16"
+                          class="border border-brandCyan/30 text-brandCyan bg-brandCyan/5 px-3 py-1.5 rounded-full text-[11px] font-semibold hover:bg-brandCyan hover:text-black hover:-translate-y-1 hover:shadow-[0_5px_15px_rgba(34,211,238,0.3)] transition-all duration-300 cursor-default"><i
+                            class="fa-solid fa-sitemap mr-1"></i> Admin. de Sistemas ERP</span>
+                </div>
+            </div>
+
+            <!-- Coluna da Direita (Timeline) -->
+            <div class="relative border-l border-gray-800 pl-8 space-y-10 py-2">
+
+                <div class="relative group">
+                    <div class="absolute w-4 h-4 bg-brandCyan rounded-full -left-[39px] top-1 border-4 border-[#0b0f15] group-hover:scale-125 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] transition-all duration-300"></div>
+                    <span class="text-brandCyan text-xs font-bold tracking-wider">2024</span>
+                    <h4 data-i18n="time-2024-title" class="text-lg font-bold text-white mt-1">O Início da Graduação</h4>
+                    <p data-i18n="time-2024-desc" class="text-textMuted text-sm mt-2 leading-relaxed">Dei mais um passo
+                        importante na minha trajetória ao ingressar na graduação de Ciência da Computação na
+                        Universidade Cidade de São Paulo. Estou aplicando meus conhecimentos em áreas mais complexas,
+                        como inteligência artificial e segurança da informação, desenvolvendo projetos que contribuem
+                        para o meu crescimento acadêmico e profissional.</p>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute w-4 h-4 bg-gray-600 group-hover:bg-brandCyan rounded-full -left-[39px] top-1 border-4 border-[#0b0f15] transition-colors duration-300"></div>
+                    <span class="text-gray-500 group-hover:text-brandCyan transition-colors text-xs font-bold tracking-wider">2023</span>
+                    <h4 data-i18n="time-2023-title" class="text-lg font-bold text-white mt-1">De Estudante a
+                        Programador</h4>
+                    <p data-i18n="time-2023-desc" class="text-textMuted text-sm mt-2 leading-relaxed">Minhas habilidades
+                        foram reconhecidas e atuei como programador em uma empresa de hardware. Fui responsável por
+                        desenvolver e manter sistemas de informação de forma eficiente, uma experiência que me ensinou a
+                        importância da colaboração em equipe e me proporcionou uma imersão prática inestimável no
+                        desenvolvimento de software.</p>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute w-4 h-4 bg-gray-600 group-hover:bg-brandCyan rounded-full -left-[39px] top-1 border-4 border-[#0b0f15] transition-colors duration-300"></div>
+                    <span class="text-gray-500 group-hover:text-brandCyan transition-colors text-xs font-bold tracking-wider">2022</span>
+                    <h4 data-i18n="time-2022-title" class="text-lg font-bold text-white mt-1">Crescendo com a Análise de
+                        Dados</h4>
+                    <p data-i18n="time-2022-desc" class="text-textMuted text-sm mt-2 leading-relaxed">Trabalhei como
+                        entregador para complementar a renda enquanto me aprofundava em análise de dados. Fiz cursos
+                        focados em Power BI e Excel, criando dashboards e análises que me ajudaram a entender o impacto
+                        real dos dados no mundo dos negócios, mantendo sempre o foco no crescimento contínuo da minha
+                        carreira.</p>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute w-4 h-4 bg-gray-600 group-hover:bg-brandCyan rounded-full -left-[39px] top-1 border-4 border-[#0b0f15] transition-colors duration-300"></div>
+                    <span class="text-gray-500 group-hover:text-brandCyan transition-colors text-xs font-bold tracking-wider">2020-2021</span>
+                    <h4 data-i18n="time-2020-title" class="text-lg font-bold text-white mt-1">Superando Desafios e
+                        Aprendendo</h4>
+                    <p data-i18n="time-2020-desc" class="text-textMuted text-sm mt-2 leading-relaxed">Durante a
+                        pandemia, busquei crescer apesar das adversidades. Estudei para o ENEM e abri um pequeno negócio
+                        de impressão, uma fase difícil que me ensinou resiliência. Paralelamente, mergulhei nos estudos
+                        de programação, conectando-me com minha verdadeira paixão: desenvolver soluções digitais.</p>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute w-4 h-4 bg-gray-600 group-hover:bg-brandCyan rounded-full -left-[39px] top-1 border-4 border-[#0b0f15] transition-colors duration-300"></div>
+                    <span class="text-gray-500 group-hover:text-brandCyan transition-colors text-xs font-bold tracking-wider">2019</span>
+                    <h4 data-i18n="time-2019-title" class="text-lg font-bold text-white mt-1">O Começo da Jornada</h4>
+                    <p data-i18n="time-2019-desc" class="text-textMuted text-sm mt-2 leading-relaxed">Fui selecionado
+                        para participar da Estação Hack do Facebook. Esse programa incrível me apresentou ao universo da
+                        programação, onde entendi o poder de criar algo do zero e as possibilidades infinitas da
+                        construção digital. Foi o momento que acendeu minha paixão irreversível por tecnologia.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- NEW: GitHub Contribution Chart -->
+        <div class="mt-16 pt-10 border-t border-gray-800/50 relative z-10">
+            <h3 class="text-xl font-bold mb-6 text-white text-center flex justify-center items-center gap-2">
+                <i class="fa-brands fa-github text-brandCyan"></i> <span
+                    data-i18n="github-title">Atividade no GitHub</span>
+            </h3>
+            <div class="bg-[#0b0f15]/80 p-4 rounded-xl border border-gray-800 overflow-x-auto custom-scrollbar flex justify-center">
+                <!-- A URL usa a cor #22d3ee (brandCyan) para os quadradinhos verdes/azuis -->
+                <img src="https://ghchart.rshah.org/22d3ee/renanratinh0" alt="Renan's Github Chart"
+                     class="min-w-[600px] opacity-90 hover:opacity-100 transition-opacity filter hue-rotate-0">
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Certificados Section -->
+    <section id="certificados" class="mt-40">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 border-b border-gray-800 pb-4">
+            <div>
+                <p data-i18n="cert-sub" class="text-[10px] text-brandCyan uppercase tracking-widest font-semibold mb-2">
+                    Qualificações</p>
+                <h2 data-i18n="cert-title" class="text-3xl font-bold">Certificados</h2>
+            </div>
+            <p data-i18n="cert-desc" class="text-textMuted text-sm max-w-sm mt-4 md:mt-0 text-left md:text-right">
+                Cursos e certificações que comprovam meu conhecimento técnico e aprimoramento contínuo.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <!-- Certificado 1 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Assistente de Recursos
+                            Humanos</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 2 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Excel 2010</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 3 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Excel 2010 Avançado</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 4 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-powerpoint"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Microsoft PowerPoint
+                            2010</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 5 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-file-word"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Microsoft Word 2010</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Fev/22 - Mar/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 6 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Empreendedorismo</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 7 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hashtag"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Mídias Sociais &
+                            Métricas</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 8 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Assistente Financeiro</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 9 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Assistente de Logística</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 10 -->
+            <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/fundacao_paulistana/"
+               target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-slate-700/20 flex items-center justify-center text-slate-300 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Assistente
+                            Administrativo</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Fundação Paulistana <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jun/22 - Jul/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 11 -->
+            <a href="https://grasshopper-yz.netlify.app//" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Animações II</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Grasshopper da Google <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Abr/22 - Abr/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 12 -->
+            <a href="https://grasshopper-yz.netlify.app//" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Animações</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Grasshopper da Google <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Mar/22 - Mar/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 13 -->
+            <a href="https://grasshopper-yz.netlify.app//" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Automação</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Grasshopper da Google <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Fev/22 - Fev/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 14 -->
+            <a href="https://grasshopper-yz.netlify.app//" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Métodos de Array</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Grasshopper da Google <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jan/22 - Jan/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 15 -->
+            <a href="https://grasshopper-yz.netlify.app//" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Fundamentos de Programação
+                            II</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Grasshopper da Google <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Dez/21 - Dez/21</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 16 -->
+            <a href="https://grasshopper-yz.netlify.app//" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Fundamentos de
+                            Codificação</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Grasshopper da Google <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Nov/21 - Nov/21</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 17 -->
+            <a href="https://grasshopper-yz.netlify.app//" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Introdução a Páginas da
+                            Web</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Grasshopper da Google <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Out/21 - Out/21</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 18 -->
+            <a href="https://grasshopper-yz.netlify.app//" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-green-500/10 flex items-center justify-center text-green-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Uso de um Editor de
+                            Código</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Grasshopper da Google <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Set/21 - Set/21</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 19 -->
+            <a href="https://recode.org.br/" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Desenv. Sistemas Web
+                            Intermediário</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            RECODE <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i></p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jul/21 - Ago/21</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 20 -->
+            <a href="https://recode.org.br/" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Desenv. de Games
+                            Intermediário</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            RECODE <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i></p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jul/21 - Ago/21</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 21 -->
+            <a href="https://recode.org.br/" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Programação com App
+                            Inventor</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            RECODE <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i></p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jul/21 - Ago/21</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 22 -->
+            <a href="https://ifrs.edu.br/" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-teal-500/10 flex items-center justify-center text-teal-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Automação de Sistemas</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            IFRS <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i></p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Mar/21 - Mar/21</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 23 -->
+            <a href="https://transparencia.educacao.sp.gov.br/Home/DetalhesPrograma?programa=1031" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-400 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Língua Inglesa</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Centro de Estudo de Línguas <i
+                                class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i></p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 10 meses</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Mar/21 - Dez/22</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Certificado 24 -->
+            <a href="https://about.fb.com/br/news/2019/01/estacao-hack-do-facebook-capacita-mais-de-12-mil-brasileiros-em-um-ano-e-traz-novidades-para-2019/" target="_blank"
+               class="bg-cardBg border border-gray-800 rounded-xl p-5 hover:border-brandCyan/40 hover:shadow-[0_0_30px_rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300 group flex flex-col cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 min-w-[40px] rounded-lg bg-blue-600/10 flex items-center justify-center text-blue-500 text-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-white leading-tight line-clamp-2">Programação</h3>
+                        <p class="text-[10px] text-textMuted mt-1 uppercase tracking-wider group-hover:text-brandCyan transition-colors">
+                            Parceria Estação Hack Facebook <i
+                                class="fa-solid fa-arrow-up-right-from-square ml-1 text-[8px]"></i></p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-800/50">
+                    <div class="flex flex-col">
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest mb-1">Duração: 1 mês</span>
+                        <span class="text-[11px] text-gray-400 font-mono"><i
+                                class="fa-regular fa-calendar text-brandCyan/70 mr-1"></i> Jul/19 - Ago/19</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="mt-40 mb-20 text-center">
+        <p data-i18n="nav-feedback" class="text-[10px] text-brandCyan uppercase tracking-widest font-semibold mb-2">
+            Feedback</p>
+        <h2 data-i18n="test-title" class="text-3xl font-bold mb-12">Depoimentos</h2>
+
+        <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-5xl mx-auto">
+
+            <!-- Depoimento 1: Mundo dos Computadores -->
+            <div class="bg-cardBg/50 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-all">
+                <i class="fa-solid fa-quote-right absolute -bottom-6 -right-4 text-9xl text-white/[0.02]"></i>
+                <div class="relative z-10 flex flex-col h-full">
+                    <p class="text-gray-300 text-sm leading-relaxed mb-8 flex-grow">"Renan é um profissional
+                        excepcional, com uma habilidade única para resolver problemas complexos e superar expectativas.
+                        Sua abordagem inovadora e proatividade em propor soluções eficientes transformaram
+                        significativamente a execução dos nossos projetos, elevando a qualidade e o impacto dos
+                        resultados."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brandCyan to-blue-600 p-[2px]">
+                            <div class="w-full h-full bg-cardBg rounded-full flex items-center justify-center text-white font-bold">
+                                MC
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-sm font-bold">Gerente</h4>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-wider">Mundo dos Computadores</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 2: E-commerce -->
+            <div class="bg-cardBg/50 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-all">
+                <i class="fa-solid fa-quote-right absolute -bottom-6 -right-4 text-9xl text-white/[0.02]"></i>
+                <div class="relative z-10 flex flex-col h-full">
+                    <p class="text-gray-300 text-sm leading-relaxed mb-8 flex-grow">"Renan foi essencial para o sucesso
+                        do nosso e-commerce. Desde o planejamento até a entrega final, ele demonstrou profundo
+                        conhecimento técnico e criatividade, criando um site altamente funcional. Após a implementação,
+                        nossas vendas cresceram significativamente e o suporte contínuo foi impecável."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-brandCyan p-[2px]">
+                            <div class="w-full h-full bg-cardBg rounded-full flex items-center justify-center text-white font-bold">
+                                JS
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-sm font-bold">João Silva</h4>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-wider">Empreendedor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 3: Automação -->
+            <div class="bg-cardBg/50 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-all">
+                <i class="fa-solid fa-quote-right absolute -bottom-6 -right-4 text-9xl text-white/[0.02]"></i>
+                <div class="relative z-10 flex flex-col h-full">
+                    <p class="text-gray-300 text-sm leading-relaxed mb-8 flex-grow">"Renan foi fundamental para a
+                        implementação de automações de processos na minha empresa. Ele conseguiu identificar gargalos
+                        nos nossos fluxos de trabalho e propôs soluções inovadoras que economizaram tempo e reduziram
+                        custos. Seu suporte técnico foi inestimável."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 p-[2px]">
+                            <div class="w-full h-full bg-cardBg rounded-full flex items-center justify-center text-white font-bold">
+                                LF
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-sm font-bold">Luiza Ferreira</h4>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-wider">Diretora de Operações</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 4: Suporte TI -->
+            <div class="bg-cardBg/50 backdrop-blur-sm border border-gray-800 p-8 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-all">
+                <i class="fa-solid fa-quote-right absolute -bottom-6 -right-4 text-9xl text-white/[0.02]"></i>
+                <div class="relative z-10 flex flex-col h-full">
+                    <p class="text-gray-300 text-sm leading-relaxed mb-8 flex-grow">"A expertise de Renan em TI foi
+                        crucial quando precisávamos de suporte técnico para integrar novos sistemas ao nosso ambiente de
+                        trabalho. Ele solucionou problemas complexos de maneira rápida e eficiente, além de capacitar a
+                        equipe para lidar com as novas ferramentas."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-red-500 p-[2px]">
+                            <div class="w-full h-full bg-cardBg rounded-full flex items-center justify-center text-white font-bold">
+                                TN
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-sm font-bold">Thiago Nunes</h4>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-wider">Gerente de TI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário de Feedback -->
+        <div class="max-w-2xl mx-auto mt-16 text-left">
+            <div class="bg-cardBg/30 backdrop-blur-md border border-gray-800 p-8 rounded-2xl relative overflow-hidden">
+                <h3 class="text-xl font-bold mb-6 text-white relative z-10"><i
+                        class="fa-solid fa-comment-dots text-brandCyan mr-2"></i> <span data-i18n="form-title">Deixe seu Feedback</span>
+                </h3>
+
+                <form id="feedback-form" class="relative z-10 flex flex-col gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-xs text-textMuted uppercase tracking-wider font-semibold">Nome</label>
+                            <input type="text" id="fb-nome" required
+                                   class="bg-[#0b0f15] border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white focus:border-brandCyan outline-none">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-xs text-textMuted uppercase tracking-wider font-semibold">Cargo</label>
+                            <input type="text" id="fb-cargo"
+                                   class="bg-[#0b0f15] border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white focus:border-brandCyan outline-none">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-xs text-textMuted uppercase tracking-wider font-semibold">Mensagem</label>
+                        <textarea id="fb-texto" required rows="3"
+                                  class="bg-[#0b0f15] border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-white focus:border-brandCyan outline-none resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="mt-2 bg-brandCyan/10 text-brandCyan border border-brandCyan/50 hover:bg-brandCyan hover:text-black font-bold py-3 px-6 rounded-lg transition-all self-end flex items-center gap-2">
+                        <span data-i18n="form-btn">Enviar</span> <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Terminal Section (Moved from Modal) -->
+    <section id="terminal" class="mt-24 mb-10 max-w-4xl mx-auto px-2">
+        <h3 class="text-2xl font-bold mb-6 text-white text-center flex items-center justify-center gap-2">
+            <i class="fa-solid fa-terminal text-brandCyan"></i> Terminal Interativo
+        </h3>
+        <p class="text-textMuted text-sm text-center mb-6">Explore o meu perfil utilizando comandos bash
+            convencionais.</p>
+
+        <div class="w-full bg-[#0a0d14] border border-gray-700 rounded-lg shadow-2xl font-mono text-sm overflow-hidden flex flex-col h-[400px] border-t-4 border-t-brandCyan">
+            <!-- Header -->
+            <div class="bg-gray-800/80 px-4 py-2 flex justify-between items-center text-gray-400 text-xs">
+                <span>renan@portfolio: ~</span>
+            </div>
+            <!-- Body -->
+            <div id="term-body" class="p-4 flex-grow overflow-y-auto text-brandCyan flex flex-col gap-2"
+                 onclick="document.getElementById('term-input').focus()">
+                <div class="text-gray-300 mb-4">
+                    Welcome to RenanOS v1.0.0 LTS <br>
+                    Type <span class="text-brandCyan font-bold">'help'</span> to see available commands.
+                </div>
+                <div id="term-output" class="flex flex-col gap-1"></div>
+                <div class="flex mt-2 items-center">
+                    <span class="mr-2 text-green-400 font-bold">visitor@renan:~$</span>
+                    <input type="text" id="term-input"
+                           class="bg-transparent border-none outline-none flex-grow text-white" autocomplete="off"
+                           spellcheck="false">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-cardBg border-t border-gray-800 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p data-i18n="footer-quote" class="text-textMuted text-sm italic mb-8 max-w-md mx-auto">"O código é a poesia do
+            programador, e a lógica é a sua rima."</p>
+        <div class="text-[10px] text-gray-600 uppercase tracking-widest border-t border-gray-800 pt-8">
+            <p>© 2026 RENAN CARVALHO CAVALCANTE. BUILT WITH PRECISION, A LOT OF TAURINE & CAFFEINE ENERGY DRINKS ⚡.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // --- LÓGICA DE INTERNACIONALIZAÇÃO (i18n) ---
+    const translations = {
+        pt: {
+            "nav-projects": "Projetos",
+            "nav-about": "Sobre mim",
+            "nav-certs": "Certificados",
+            "nav-feedback": "Feedback",
+            "hero-role": "Programador de sistemas de informação",
+            "hero-desc": "Cursando Ciência da Computação na Universidade Cidade de São Paulo – 5° semestre. Apaixonado por transformar desafios complexos em código limpo e produtos eficientes.",
+            "btn-resume": "Baixar Currículo",
+            "btn-access": "Acessar",
+            "btn-code": "Código",
+            "btn-credential": "Ver Credencial",
+            "proj-sub": "Portfólio",
+            "proj-title": "Meus Projetos",
+            "proj-desc": "Uma seleção de desafios técnicos transformados em soluções funcionais e escaláveis.",
+            "about-sub": "Minha Jornada",
+            "about-p1": "Sou Renan Carvalho, um profissional movido pela paixão por tecnologia, programação e pela busca constante por soluções inovadoras. Com uma sólida vivência em administração de sistemas ERP, destaco-me no suporte técnico a usuários, na criação e otimização de regras de negócio complexas e no gerenciamento eficiente de infraestruturas. Minha abordagem de trabalho é fundamentada na união entre análise técnica rigorosa, criatividade na resolução de problemas e uma atenção minuciosa aos detalhes, garantindo eficiência e resultados consistentes em projetos desafiadores.",
+            "about-p2": "Quando não estou imerso em linhas de código, gosto de exercitar a mente com jogos de estratégia e competitivos, além de resolver enigmas lógicos. Valorizo o equilíbrio recarregando as energias praticando esportes ao ar livre e aproveitando momentos de qualidade com amigos e familiares. Também sou um leitor assíduo, explorando continuamente conteúdos sobre ciência, lógica e novas tecnologias.",
+            "about-skills": "Minhas Habilidades",
+            "skill-1": "Programação",
+            "skill-2": "Banco de Dados",
+            "skill-3": "Inteligência Artificial",
+            "skill-4": "Sistemas Operacionais",
+            "skill-5": "Automação de Processos",
+            "skill-6": "Gestão de Projetos",
+            "skill-7": "Segurança da Informação",
+            "skill-8": "Design Gráfico",
+            "skill-9": "Análise de Dados",
+            "skill-10": "Suporte Técnico em TI",
+            "skill-11": "Gestão de Marketplace",
+            "skill-12": "Atendimento ao Cliente",
+            "skill-13": "Conhecimento Fiscal e NFe",
+            "skill-14": "Microsoft Office",
+            "skill-15": "Ferramentas Gráficas",
+            "skill-16": "Admin. de Sistemas ERP",
+            "time-2024-title": "O Início da Graduação",
+            "time-2024-desc": "Dei mais um passo importante na minha trajetória ao ingressar na graduação de Ciência da Computação na Universidade Cidade de São Paulo. Estou aplicando meus conhecimentos em áreas mais complexas, como inteligência artificial e segurança da informação, desenvolvendo projetos que contribuem para o meu crescimento acadêmico e profissional.",
+            "time-2023-title": "De Estudante a Programador",
+            "time-2023-desc": "Minhas habilidades foram reconhecidas e atuei como programador em uma empresa de hardware. Fui responsável por desenvolver e manter sistemas de informação de forma eficiente, uma experiência que me ensinou a importância da colaboração em equipe e me proporcionou uma imersão prática inestimável no desenvolvimento de software.",
+            "time-2022-title": "Crescendo com a Análise de Dados",
+            "time-2022-desc": "Trabalhei como entregador para complementar a renda enquanto me aprofundava em análise de dados. Fiz cursos focados em Power BI e Excel, criando dashboards e análises que me ajudaram a entender o impacto real dos dados no mundo dos negócios, mantendo sempre o foco no crescimento contínuo da minha carreira.",
+            "time-2020-title": "Superando Desafios e Aprendendo",
+            "time-2020-desc": "Durante a pandemia, busquei crescer apesar das adversidades. Estudei para o ENEM e abri um pequeno negócio de impressão, uma fase difícil que me ensinou resiliência. Paralelamente, mergulhei nos estudos de programação, conectando-me com minha verdadeira paixão: desenvolver soluções digitais.",
+            "time-2019-title": "O Começo da Jornada",
+            "time-2019-desc": "Fui selecionado para participar da Estação Hack do Facebook. Esse programa incrível me apresentou ao universo da programação, onde entendi o poder de criar algo do zero e as possibilidades infinitas da construção digital. Foi o momento que acendeu minha paixão irreversível por tecnologia.",
+            "cert-sub": "Qualificações",
+            "cert-title": "Certificados",
+            "cert-desc": "Cursos e certificações que comprovam meu conhecimento técnico e aprimoramento contínuo.",
+            "github-title": "Atividade no GitHub",
+            "test-title": "Depoimentos",
+            "form-title": "Deixe seu Feedback",
+            "form-btn": "Enviar",
+            "footer-quote": "\"O código é a poesia do programador, e a lógica é a sua rima.\"",
+            "time-y": "Anos",
+            "time-mo": "Meses",
+            "time-d": "Dias",
+            "time-h": "Horas",
+            "time-m": "Minutos",
+            "time-s": "Segundos"
+        },
+        en: {
+            "nav-projects": "Projects",
+            "nav-about": "About me",
+            "nav-certs": "Certificates",
+            "nav-feedback": "Feedback",
+            "hero-role": "Information Systems Programmer",
+            "hero-desc": "Computer Science student at Universidade Cidade de São Paulo – 5th semester. Passionate about transforming complex challenges into clean code and efficient products.",
+            "btn-resume": "Download Resume",
+            "btn-access": "View App",
+            "btn-code": "Source Code",
+            "btn-credential": "View Credential",
+            "proj-sub": "Portfolio",
+            "proj-title": "My Projects",
+            "proj-desc": "A selection of technical challenges transformed into functional and scalable solutions.",
+            "about-sub": "My Journey",
+            "about-p1": "I am Renan Carvalho, a professional driven by a passion for technology, programming, and the constant search for innovative solutions. With solid experience in ERP systems administration, I excel in user technical support, creating and optimizing complex business rules, and efficiently managing infrastructures. My work approach is based on the union of rigorous technical analysis, creative problem-solving, and meticulous attention to detail, ensuring consistent results in challenging projects.",
+            "about-p2": "When I am not immersed in lines of code, I like to exercise my mind with strategy and competitive games, as well as solving logical puzzles. I value balance by recharging my energy practicing outdoor sports and enjoying quality time with friends and family. I am also an avid reader, continually exploring content about science, logic, and new technologies.",
+            "about-skills": "My Skills",
+            "skill-1": "Programming",
+            "skill-2": "Databases",
+            "skill-3": "Artificial Intelligence",
+            "skill-4": "Operating Systems",
+            "skill-5": "Process Automation",
+            "skill-6": "Project Management",
+            "skill-7": "Information Security",
+            "skill-8": "Graphic Design",
+            "skill-9": "Data Analysis",
+            "skill-10": "IT Tech Support",
+            "skill-11": "Marketplace Mgmt",
+            "skill-12": "Customer Service",
+            "skill-13": "Tax Knowledge & e-Invoicing",
+            "skill-14": "Microsoft Office",
+            "skill-15": "Graphic Tools",
+            "skill-16": "ERP Systems Admin",
+            "time-2024-title": "Starting College",
+            "time-2024-desc": "I took another important step in my career by enrolling in a Computer Science degree at Universidade Cidade de São Paulo. I am applying my knowledge in more complex areas, such as artificial intelligence and information security, developing projects that contribute to my academic and professional growth.",
+            "time-2023-title": "From Student to Programmer",
+            "time-2023-desc": "My skills were recognized and I started working as a programmer at a hardware company. I was responsible for efficiently developing and maintaining information systems, an experience that taught me the importance of teamwork and provided me with invaluable practical immersion in software development.",
+            "time-2022-title": "Growing with Data Analysis",
+            "time-2022-desc": "I worked as a delivery driver to supplement my income while diving deep into data analysis. I took courses focused on Power BI and Excel, creating dashboards and analyses that helped me understand the real impact of data in the business world, always keeping my focus on continuous career growth.",
+            "time-2020-title": "Overcoming Challenges and Learning",
+            "time-2020-desc": "During the pandemic, I sought to grow despite the adversities. I studied for my college entrance exams and opened a small printing business, a difficult phase that taught me resilience. At the same time, I immersed myself in programming studies, connecting with my true passion: developing digital solutions.",
+            "time-2019-title": "The Beginning of the Journey",
+            "time-2019-desc": "I was selected to participate in Facebook's Estação Hack. This incredible program introduced me to the universe of programming, where I understood the power of creating something from scratch and the infinite possibilities of digital construction. It was the moment that ignited my irreversible passion for technology.",
+            "cert-sub": "Qualifications",
+            "cert-title": "Certificates",
+            "cert-desc": "Courses and certifications that prove my technical knowledge and continuous improvement.",
+            "github-title": "GitHub Activity",
+            "test-title": "Testimonials",
+            "form-title": "Leave a Feedback",
+            "form-btn": "Submit",
+            "footer-quote": "\"Code is the poetry of the programmer, and logic is their rhyme.\"",
+            "time-y": "Years",
+            "time-mo": "Months",
+            "time-d": "Days",
+            "time-h": "Hours",
+            "time-m": "Minutes",
+            "time-s": "Seconds"
+        }
+    };
+
+    let currentLang = 'pt';
+
+    function toggleLang() {
+        currentLang = currentLang === 'pt' ? 'en' : 'pt';
+
+        // Atualiza os botões
+        const btnText = currentLang === 'pt' ? '🇺🇸 EN' : '🇧🇷 PT';
+        document.getElementById('lang-btn').innerText = btnText;
+        document.getElementById('lang-btn-mobile').innerText = currentLang === 'pt' ? '🇺🇸' : '🇧🇷';
+
+        // Atualiza os textos com data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[currentLang][key]) {
+                // Remove the font-awesome icon if it exists inside the span, then add the text, then re-add the icon if it's a skill tag
+                if (key.startsWith('skill-')) {
+                    const iconHTML = el.innerHTML.split('</i>')[0] + '</i> ';
+                    el.innerHTML = iconHTML + translations[currentLang][key];
+                } else if (key === 'form-btn') {
+                    el.innerHTML = translations[currentLang][key];
+                } else {
+                    el.innerText = translations[currentLang][key];
+                }
+            }
+        });
+    }
+
+    // --- LÓGICA DO TERMINAL INTERATIVO ---
+    const termInput = document.getElementById('term-input');
+    const termOutput = document.getElementById('term-output');
+    const termBody = document.getElementById('term-body');
+
+    termInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            const cmd = this.value.trim().toLowerCase();
+            let response = '';
+
+            switch (cmd) {
+                case 'help':
+                    response = 'Available commands: <br>- <b>whoami</b>: shows user info <br>- <b>skills</b>: lists technical skills <br>- <b>clear</b>: clears the terminal <br>- <b>sudo</b>: execute command as superuser';
+                    break;
+                case 'whoami':
+                    response = 'You are a recruiter or an awesome dev checking out Renan\'s portfolio!';
+                    break;
+                case 'skills':
+                    response = '> Python <br>> JavaScript / Node.js <br>> React / Tailwind CSS <br>> SQL & Database Management <br>> Automation Scripts';
+                    break;
+                case 'sudo':
+                    response = '<span class="text-red-400">Nice try. This incident will be reported to Santa Claus.</span>';
+                    break;
+                case 'clear':
+                    termOutput.innerHTML = '';
+                    this.value = '';
+                    return;
+                case 'exit':
+                    response = 'Terminal is permanently embedded. Use "clear" to clean the screen.';
+                    break;
+                case '':
+                    return;
+                default:
+                    response = `<span class="text-red-400">Command not found: ${cmd}</span>`;
+            }
+
+            termOutput.innerHTML += `<div><span class="text-green-400 font-bold">visitor@renan:~$</span> ${cmd}</div>`;
+            termOutput.innerHTML += `<div class="text-gray-300 mb-3 ml-2">${response}</div>`;
+
+            this.value = '';
+            termBody.scrollTop = termBody.scrollHeight;
+        }
+    });
+
+    // --- FEEDBACK REAL TIME ---
+    document.getElementById('feedback-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nomeInput = document.getElementById('fb-nome').value;
+        const textoInput = document.getElementById('fb-texto').value;
+        const initials = nomeInput.substring(0, 2).toUpperCase();
+
+        const newCardHTML = `
+            <div class="bg-cardBg/50 backdrop-blur-sm border border-brandCyan/40 p-8 rounded-2xl relative overflow-hidden group shadow-[0_0_20px_rgba(34,211,238,0.1)] transition-all animate-fade-in-up">
+                <i class="fa-solid fa-quote-right absolute -bottom-6 -right-4 text-9xl text-white/[0.02]"></i>
+                <div class="relative z-10 flex flex-col h-full">
+                    <p class="text-gray-300 text-sm leading-relaxed mb-8 flex-grow">"${textoInput}"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-teal-400 to-brandCyan p-[2px]">
+                            <div class="w-full h-full bg-cardBg rounded-full flex items-center justify-center text-white font-bold tracking-wider">${initials}</div>
+                        </div>
+                        <div><h4 class="text-white text-sm font-bold">${nomeInput}</h4></div>
+                    </div>
+                </div>
+            </div>`;
+
+        document.getElementById('testimonials-grid').insertAdjacentHTML('afterbegin', newCardHTML);
+        e.target.reset();
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Data final da contagem regressiva (final de Dezembro de 2027)
+        const dataFinal = new Date("2027-12-31T23:59:59");
+
+        function atualizarTimer() {
+            const agora = new Date();
+            const distancia = dataFinal - agora;
+
+            if (distancia < 0) {
+                // Se a data já passou, zera tudo (ou você pode colocar a lógica de "FORMADO!" aqui)
+                document.getElementById('timer-anos').innerText = "00";
+                document.getElementById('timer-meses').innerText = "00";
+                document.getElementById('timer-dias').innerText = "00";
+                document.getElementById('timer-horas').innerText = "00";
+                document.getElementById('timer-minutos').innerText = "00";
+                document.getElementById('timer-segundos').innerText = "00";
+                return;
+            }
+
+            // Cálculos precisos considerando anos, meses e dias do calendário
+            let anos = dataFinal.getFullYear() - agora.getFullYear();
+            let meses = dataFinal.getMonth() - agora.getMonth();
+            let dias = dataFinal.getDate() - agora.getDate();
+            let horas = dataFinal.getHours() - agora.getHours();
+            let minutos = dataFinal.getMinutes() - agora.getMinutes();
+            let segundos = dataFinal.getSeconds() - agora.getSeconds();
+
+            // Ajustes para valores negativos (vai "emprestando" da unidade maior)
+            if (segundos < 0) {
+                segundos += 60;
+                minutos--;
+            }
+            if (minutos < 0) {
+                minutos += 60;
+                horas--;
+            }
+            if (horas < 0) {
+                horas += 24;
+                dias--;
+            }
+            if (dias < 0) {
+                // Pega a quantidade de dias do mês anterior
+                const diasNoMesAnterior = new Date(agora.getFullYear(), agora.getMonth() + 1, 0).getDate();
+                dias += diasNoMesAnterior;
+                meses--;
+            }
+            if (meses < 0) {
+                meses += 12;
+                anos--;
+            }
+
+            // Função para garantir que os números tenham 2 dígitos (ex: 04, 09)
+            const formatarNumero = (num) => num.toString().padStart(2, '0');
+
+            // Injeta os valores no HTML
+            document.getElementById('timer-anos').innerText = formatarNumero(anos);
+            document.getElementById('timer-meses').innerText = formatarNumero(meses);
+            document.getElementById('timer-dias').innerText = formatarNumero(dias);
+            document.getElementById('timer-horas').innerText = formatarNumero(horas);
+            document.getElementById('timer-minutos').innerText = formatarNumero(minutos);
+            document.getElementById('timer-segundos').innerText = formatarNumero(segundos);
+        }
+
+        // Roda a função uma vez imediatamente para não ficar "00" durante o primeiro segundo
+        atualizarTimer();
+
+        // Atualiza a cada 1 segundo (1000 milissegundos)
+        setInterval(atualizarTimer, 1000);
+    });
+</script>
+
 </body>
-
 </html>

@@ -81,7 +81,7 @@ Um portfólio web responsivo construído para exibir projetos, habilidades e inf
 <a href="https://renanratinh0.github.io/renanratinh0/index.html">🔗 Acesse o Projeto</a> <a href="https://github.com/renanratinh0/renanratinh0">🚀 Veja no GitHub</a>
 </p>
 <a href="https://github.com/renanratinh0/renanratinh0">
-<img src="imgs/Projetos/Portfólio.png" alt="Preview do Portfólio Pessoal">
+<img src="imgs/Projetos/Portfolio.png" alt="Preview do Portfólio Pessoal">
 </a>
 </td>
 <td width="50%">
