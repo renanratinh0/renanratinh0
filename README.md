@@ -1,6 +1,6 @@
 ## Oi 👋! Eu sou Renan Carvalho 🧑‍💻
 
-💻 **Programador Full Stack** | 🎓 **Ciência da Computação - 4º semestre**  
+💻 **Programador Full Stack** | 🎓 **Ciência da Computação - 5º semestre**  
 🔧 Experiência em ERP, automação e desenvolvimento web  
 🚀 Apaixonado por tecnologia, desafios e inovação  
 🔍 Sempre em busca de aprendizado e evolução constante  
@@ -54,10 +54,10 @@ Ao longo da minha trajetória, realizei diversos cursos – de **Excel Avançado
 <p align="center">
 Um projeto de e-commerce simulado que demonstra habilidades em desenvolvimento, manipulação de dados e operações de TI. Desenvolvido com HTML, CSS, JS e Tailwind CSS.
 <br />
-<a href="https://renanratinh0.github.io/TecnoStoreBR/index.html">🔗 Acesse o Projeto</a> <a href="https://github.com/renanratinh0/TecnoStoreBR">🚀 Veja no GitHub</a>
+<a href="https://renanratinh0.github.io/TecnoStoreBR/index.html">🔗 Acesse o Projeto</a> | <a href="https://github.com/renanratinh0/TecnoStoreBR">🚀 Veja no GitHub</a>
 </p>
 <a href="https://renanratinh0.github.io/TecnoStoreBR/index.html">
-<img src="imgs/Projetos/TecnoStoreBR.png" alt="Preview do Projeto de E-commerce" width="600" />
+<img src="imgs/Projetos/TecnoStoreBR.png" alt="Preview do Projeto de E-commerce" width="100%" />
 </a>
 </td>
 <td width="50%">
@@ -65,10 +65,10 @@ Um projeto de e-commerce simulado que demonstra habilidades em desenvolvimento, 
 <p align="center">
 Uma solução digital inovadora para organizar e acessar, de maneira prática e intuitiva, todo o conteúdo do curso de Ciência da Computação.
 <br />
-<a href="https://dashboard-quantum-smart.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687">🔗 Acesse o Projeto</a>
+<a href="https://dashboard-quantum-smart.notion.site/11d65e23a26e4be3941e4ce7681342ac">🔗 Acesse o Projeto</a>
 </p>
-<a href="https://dashboard-quantum-smart.notion.site/b7bf990f0be94291b9f6b01359a8e00a?v=6fdd751eb7624d248c2f8b26b52d6687">
-<img src="imgs/Projetos/Site%20de%20Conteúdo%20Acadêmico%20-%20Ciência%20da%20Computação.png" alt="Preview do Bot de Automação">
+<a href="https://dashboard-quantum-smart.notion.site/11d65e23a26e4be3941e4ce7681342ac">
+<img src="imgs/Projetos/site-academico.png" alt="Preview do Site Acadêmico" width="100%" />
 </a>
 </td>
 </tr>
@@ -78,10 +78,10 @@ Uma solução digital inovadora para organizar e acessar, de maneira prática e 
 <p align="center">
 Um portfólio web responsivo construído para exibir projetos, habilidades e informações de contato.
 <br />
-<a href="https://renanratinh0.github.io/renanratinh0/index.html">🔗 Acesse o Projeto</a> <a href="https://github.com/renanratinh0/renanratinh0">🚀 Veja no GitHub</a>
+<a href="https://renanratinh0.github.io/renanratinh0/index.html">🔗 Acesse o Projeto</a> | <a href="https://github.com/renanratinh0/renanratinh0">🚀 Veja no GitHub</a>
 </p>
 <a href="https://github.com/renanratinh0/renanratinh0">
-<img src="imgs/Projetos/Portfolio.png" alt="Preview do Portfólio Pessoal">
+<img src="imgs/Projetos/Portfolio.png" alt="Preview do Portfólio Pessoal"/>
 </a>
 </td>
 <td width="50%">
@@ -89,10 +89,10 @@ Um portfólio web responsivo construído para exibir projetos, habilidades e inf
 <p align="center">
 Um jogo de perguntas e respostas utilizando HTML, CSS e JavaScript, com o framework Bootstrap para estilização.
 <br />
-<a href="https://renanratinh0.github.io/CodeQuiz/index.html">🔗 Acesse o Projeto</a> <a href="https://github.com/renanratinh0/CodeQuiz">🚀 Veja no GitHub</a>
+<a href="https://renanratinh0.github.io/CodeQuiz/index.html">🔗 Acesse o Projeto</a> | <a href="https://github.com/renanratinh0/CodeQuiz">🚀 Veja no GitHub</a>
 </p>
 <a href="https://renanratinh0.github.io/CodeQuiz/index.html">
-<img src="imgs/Projetos/CodeQuiz.png" alt="Preview do Sistema de Gestão">
+<img src="imgs/Projetos/CodeQuiz.png" alt="Preview do CodeQuiz" width="100%" />
 </a>
 </td>
 </tr>
